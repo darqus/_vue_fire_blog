@@ -1,0 +1,50 @@
+import fields from './fields'
+
+export const createFormData = () => ({
+  showLabels: true,
+  inputs: [
+    {
+      label: 'First Name',
+      name: 'firstName',
+      type: 'text',
+      value: '',
+      pattern: fields.oneWord.pattern,
+      title: fields.oneWord.title('First Name'),
+      icon: 'user',
+      required: true,
+    },
+    {
+      label: 'Last Name',
+      name: 'lastName',
+      type: 'text',
+      value: '',
+      pattern: fields.oneWord.pattern,
+      title: fields.oneWord.title('Last Name'),
+      icon: 'user',
+      required: true,
+    },
+    {
+      label: 'User Name',
+      name: 'userName',
+      type: 'text',
+      value: '',
+      pattern: fields.oneWord.pattern,
+      title: fields.oneWord.title('User Name'),
+      icon: 'user',
+      required: true,
+    },
+    {
+      label: 'Email',
+      name: 'email',
+      type: 'email',
+      value: '',
+      pattern: fields.email.pattern,
+      title: fields.email.title,
+      disabled: true,
+      icon: 'email',
+      iconClassName: 'disabled',
+      required: true,
+    },
+  ],
+  submitButtonText: 'Save Changes',
+})

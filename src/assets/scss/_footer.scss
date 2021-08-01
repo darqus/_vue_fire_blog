@@ -1,0 +1,78 @@
+.footer {
+  display: grid;
+  grid-gap: 1.2 * $spacer;
+  color: $white;
+  background-color: $black;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 1.5 * $spacer;
+    place-items: center initial;
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: initial;
+    }
+
+    .left {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 1.5 * $spacer;
+      place-items: initial;
+
+      @include media-breakpoint-down(sm) {
+        grid-template-columns: initial;
+        place-items: center;
+      }
+
+      .logo {
+        font-size: 1.5 * $spacer;
+        font-weight: 600;
+        color: $white;
+        text-decoration: none;
+        transition: color $duration $transition;
+
+        &:hover {
+          color: rgba($white, 0.7);
+        }
+      }
+
+      .nav {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 1.5 * $spacer;
+
+        .link {
+          font-size: $spacer;
+          font-weight: 500;
+          color: $white;
+          text-decoration: none;
+
+          &.active,
+          &:hover {
+            color: rgba($white, 0.7);
+          }
+        }
+      }
+
+      .col-2 {
+        place-self: center;
+      }
+    }
+
+    .right {
+      display: grid;
+      place-items: end;
+      align-self: center;
+      color: $white;
+
+      @include media-breakpoint-down(sm) {
+        place-items: center;
+      }
+
+      small {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

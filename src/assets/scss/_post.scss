@@ -1,0 +1,189 @@
+.create-post,
+.edit-post {
+  overflow: hidden;
+  color: $white;
+  background-color: $gray-48;
+
+  .container {
+    display: grid;
+    grid-gap: 2.5 * $spacer;
+
+    .blog-info {
+      input {
+        padding: 10px 20px;
+        font-size: $spacer;
+        border: none;
+        // border-bottom: 1px solid $gray-48;
+        border-radius: $border-radius;
+        transition: 0.5s ease-in-out all;
+
+        &:nth-child(1) {
+          min-width: 300px;
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: 0 1px 0 0 $gray-48;
+        }
+      }
+
+      /* .upload-file {
+        display: grid;
+        grid-gap: 1.5 * $spacer;
+
+        input {
+          display: none;
+        }
+
+        .preview {
+          margin-left: $spacer;
+          text-transform: initial;
+        }
+
+        span {
+          align-self: center;
+          margin-left: $spacer;
+          font-size: 12px;
+        }
+      } */
+    }
+
+    .editor {
+      display: grid;
+      grid-gap: 2.5 * $spacer;
+
+      .editor-buttons {
+        display: grid;
+        grid-auto-flow: column;
+        place-content: start;
+        grid-gap: 5px;
+
+        @include media-breakpoint-down(sm) {
+          grid-template-columns: repeat(6, auto);
+          grid-auto-flow: initial;
+          grid-gap: 10px;
+        }
+
+        .editor-button {
+          > .editor-icon {
+            width: 34px;
+            height: 34px;
+            padding: 5px;
+            cursor: pointer;
+            background-color: $gray-72;
+            border-radius: 5px;
+            transition: background-color $duration $transition;
+
+            path {
+              fill: $white;
+            }
+
+            &:hover {
+              background-color: $gray-104;
+            }
+          }
+
+          &.is-active {
+            > .editor-icon {
+              background-color: $gray-104;
+
+              &:hover {
+                background-color: $gray-128;
+              }
+            }
+          }
+        }
+      }
+
+      /* Basic editor styles */
+      .ProseMirror {
+        padding: 10px 20px;
+        border: 1px solid $gray-200;
+        border-radius: $border-radius;
+
+        ul,
+        ol {
+          padding: 0 1rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          line-height: 1.1;
+        }
+
+        code {
+          color: $gray-104;
+          background-color: rgba($gray-104, 0.1);
+        }
+
+        pre {
+          padding: 0.75rem 1rem;
+          font-family: monospace;
+          color: $white;
+          background: $gray-32;
+          border-radius: 0.5rem;
+
+          code {
+            padding: 0;
+            font-size: 0.8rem;
+            color: inherit;
+            background: none;
+          }
+        }
+
+        mark {
+          background-color: $yellow;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        blockquote {
+          padding-left: 1rem;
+          border-left: 2px solid rgba($gray-32, 0.1);
+        }
+
+        hr {
+          margin: 2rem 0;
+          border: none;
+          border-top: 2px solid rgba($gray-32, 0.1);
+        }
+      }
+    }
+
+    .blog-actions {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: $spacer;
+      place-content: center end;
+
+      @include media-breakpoint-down(sm) {
+        grid-auto-flow: initial;
+        place-content: center;
+      }
+    }
+  }
+}
+
+.post-view {
+  color: $white;
+  background-color: $gray-48;
+
+  .container {
+    display: grid;
+    grid-gap: 2.5 * $spacer;
+
+    .post-view-actions {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: $spacer;
+      place-content: center end;
+    }
+  }
+}

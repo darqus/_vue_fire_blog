@@ -1,0 +1,232 @@
+.header {
+  display: grid;
+  grid-gap: 1.2 * $spacer;
+  box-shadow: $box-shadow;
+
+  .nav.nav-header {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+
+    .branding {
+      .logo {
+        font-size: 1.5 * $spacer;
+        font-weight: 600;
+        color: $black;
+        text-decoration: none;
+        transition: color $duration $transition;
+
+        &:hover {
+          color: rgba($black, 0.7);
+        }
+      }
+    }
+
+    .nav-links {
+      display: grid;
+      align-content: center;
+      justify-items: end;
+
+      .nav {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 1.5 * $spacer;
+
+        .link {
+          display: grid;
+          place-self: center;
+          font-weight: 500;
+          transition: color $duration $transition;
+
+          &.active,
+          &:hover {
+            color: rgba($black, 0.7);
+          }
+        }
+      }
+
+      .mobile-menu {
+        cursor: pointer;
+      }
+
+      .menu-icon {
+        width: auto;
+        height: 25px;
+        pointer-events: none;
+      }
+    }
+
+    .nav-profile {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      color: $white;
+      cursor: pointer;
+      background-color: $gray-48;
+      border-radius: 50%;
+      place-content: center;
+
+      span {
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .profile-menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 99;
+        width: 250px;
+        cursor: initial;
+        background-color: $gray-72;
+        box-shadow: $box-shadow;
+
+        &::before {
+          position: absolute;
+          top: -10px;
+          right: 11px;
+          width: 0;
+          height: 0;
+          content: "";
+          border-color:
+            transparent  transparent $gray-72
+            transparent;
+          border-style: solid;
+          border-width: 0 10px 10px 10px;
+        }
+
+        &::after {
+          position: absolute;
+          bottom: -18px;
+          left: 10px;
+          width: 0;
+          height: 0;
+          margin-left: -10px;
+          content: "";
+          border-color: $gray-48 transparent transparent transparent;
+          border-style: solid;
+          border-width: 18px 1px 0 190px;
+        }
+
+        .nav-profile-info {
+          display: grid;
+          grid-auto-flow: column;
+          place-items: center start;
+          padding: $spacer;
+          border-bottom: 1px solid $white;
+
+          .initials {
+            position: initial;
+            display: grid;
+            place-items: center;
+            width: 40px;
+            height: 40px;
+            color: $gray-48;
+            user-select: none;
+            background-color: $white;
+            border-radius: 50%;
+            place-content: center;
+          }
+
+          .right {
+            position: initial;
+            display: grid;
+            place-self: center start;
+
+            p:nth-child(1) {
+              font-size: 14px;
+            }
+
+            p:nth-child(2),
+            p:nth-child(3) {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .nav-profile-options {
+          display: grid;
+          grid-gap: $spacer;
+          place-items: center start;
+          padding: $spacer;
+          background-color: $gray-88;
+
+          .option {
+            display: grid;
+            grid-auto-flow: column;
+            grid-gap: $spacer;
+            place-items: center;
+            color: rgba($white, 0.7);
+            text-decoration: none;
+            cursor: pointer;
+            transition: color $duration $transition;
+
+            &:hover,
+            &.active {
+              color: $white;
+            }
+
+            &.active::after {
+              color: $white;
+              content: "⇽";
+            }
+
+            .icon {
+              width: 18px;
+              height: auto;
+            }
+
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1020;
+    display: grid;
+    grid-gap: 1.2 * $spacer;
+    width: 70%;
+    max-width: 250px;
+    height: 100%;
+    padding: 25px;
+    background-color: $gray-72;
+    place-content: baseline start;
+
+    &-enter-active,
+    &-leave-active {
+      transition: transform $duration $transition;
+    }
+
+    &-enter,
+    &-leave-to {
+      transform: translateX(-250px);
+    }
+
+    &-enter-to {
+      transform: translateX(0);
+    }
+
+    a {
+      color: $white;
+
+      &.active,
+      &:hover {
+        color: rgba($white, 0.7);
+      }
+
+      &.router-link-active {
+        padding-left: 10px;
+        border-left: 2px solid $white;
+      }
+    }
+  }
+}

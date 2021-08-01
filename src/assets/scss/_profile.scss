@@ -1,0 +1,251 @@
+$form-width: 290px;
+$form-width-mobile: initial;
+
+.form-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  overflow: hidden;
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: initial;
+    padding-right: initial;
+    padding-left: initial;
+  }
+
+  .container {
+    position: relative;
+    display: grid;
+    grid-gap: 1.2 * $spacer;
+    place-items: center;
+    place-content: center;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      place-items: center stretch;
+      place-content: center stretch;
+      font-size: 0.9 * $spacer;
+    }
+
+    h1 {
+      text-align: center;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 1.3 * $spacer;
+      }
+
+      a {
+        color: $gray-48;
+        transition: color $duration $transition;
+
+        &:hover {
+          color: rgba($gray-48, 0.8);
+        }
+      }
+    }
+
+    h2 {
+      max-width: $form-width;
+      font-size: 1.3 * $spacer;
+      color: $gray-48;
+      text-align: center;
+
+      @include media-breakpoint-down(sm) {
+        max-width: $form-width-mobile;
+        font-size: 1.1 * $spacer;
+      }
+    }
+
+    .login-register {
+      .router-link {
+        color: $black;
+        transition: color $duration $transition;
+
+        &:hover {
+          color: rgba($black, 0.8);
+        }
+      }
+    }
+  }
+
+  .forgot-password {
+    font-size: 14px;
+    color: $black;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom $duration $transition;
+  }
+
+  .angle {
+    position: absolute;
+    right: -30px;
+    width: 60px;
+    height: 101%;
+    background-color: $white;
+    transform: rotateZ(3deg);
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  .background {
+    width: 100%;
+    height: 100%;
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba($gray-104, 0.4),
+        rgba($gray-32, 0.8)
+      ),
+      radial-gradient(
+        circle at 120% 100px,
+        rgba($gray-32, 0.8),
+        rgba($gray-168, 0.9),
+        rgba($gray-32, 0.8)
+      );
+    background-size: cover;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
+
+.profile,
+.admin {
+  display: grid;
+
+  .container {
+    display: grid;
+    grid-gap: 1.2 * $spacer;
+    place-items: center;
+    place-content: center;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      place-items: center stretch;
+      place-content: center stretch;
+      font-size: 0.9 * $spacer;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .subheader {
+      font-size: 1.5 * $spacer;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .initials {
+      position: initial;
+      display: grid;
+      place-items: center;
+      place-self: center;
+      width: 80px;
+      height: 80px;
+      font-size: 32px;
+      color: $white;
+      background-color: $gray-48;
+      border-radius: 50%;
+
+      > div {
+        user-select: none;
+      }
+    }
+
+    .admin-badge {
+      place-self: center;
+      padding: 8px 18px;
+      font-size: 14px;
+      color: $white;
+      text-align: center;
+      text-transform: capitalize;
+      user-select: none;
+      background-color: $gray-104;
+      border-radius: $border-radius;
+
+      > .admin-icon {
+        width: 14px;
+        height: auto;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+form {
+  position: relative;
+  display: grid;
+  grid-gap: 1.2 * $spacer;
+
+  &.profile-info,
+  &.admin-info {
+    grid-gap: 1.2 * $spacer;
+    place-items: center stretch;
+    border-radius: $border-radius;
+
+    label {
+      display: grid;
+      justify-self: start;
+      font-size: 14px;
+      color: $gray-104;
+    }
+
+    .icon {
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+      width: 12px;
+
+      .disabled {
+        path {
+          fill: $gray-104;
+        }
+      }
+    }
+  }
+
+  .inputs {
+    display: grid;
+    grid-gap: 0.8 * $spacer;
+
+    .input {
+      position: relative;
+      display: grid;
+      grid-gap: 0.3 * $spacer;
+      place-items: center;
+
+      input {
+        padding: 10px 10px 10px 45px;
+        font-size: $spacer;
+        background-color: $gray-248;
+        border: 1px solid $gray-232;
+        border-radius: 7px;
+        transition: border-color $duration $transition;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:valid {
+          border-color: rgba($green, 0.5);
+        }
+
+        &:invalid {
+          border-color: rgba($red, 0.5);
+        }
+      }
+
+      .icon {
+        position: absolute;
+        left: 20px;
+        width: 12px;
+      }
+    }
+  }
+}

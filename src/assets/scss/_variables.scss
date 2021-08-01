@@ -1,0 +1,224 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$white: #fff !default;
+
+$gray-8: rgb(8, 8, 8);
+$gray-16: rgb(16, 16, 16);
+$gray-24: rgb(24, 24, 24);
+$gray-32: rgb(32, 32, 32);
+$gray-40: rgb(40, 40, 40);
+$gray-48: rgb(48, 48, 48);
+$gray-56: rgb(56, 56, 56);
+$gray-64: rgb(64, 64, 64);
+$gray-72: rgb(72, 72, 72);
+$gray-80: rgb(80, 80, 80);
+$gray-88: rgb(88, 88, 88);
+$gray-96: rgb(96, 96, 96);
+$gray-104: rgb(104, 104, 104);
+$gray-112: rgb(112, 112, 112);
+$gray-120: rgb(120, 120, 120);
+$gray-128: rgb(128, 128, 128);
+$gray-136: rgb(136, 136, 136);
+$gray-144: rgb(144, 144, 144);
+$gray-152: rgb(152, 152, 152);
+$gray-160: rgb(160, 160, 160);
+$gray-168: rgb(168, 168, 168);
+$gray-176: rgb(176, 176, 176);
+$gray-184: rgb(184, 184, 184);
+$gray-192: rgb(192, 192, 192);
+$gray-200: rgb(200, 200, 200);
+$gray-208: rgb(208, 208, 208);
+$gray-216: rgb(216, 216, 216);
+$gray-224: rgb(224, 224, 224);
+$gray-232: rgb(232, 232, 232);
+$gray-240: rgb(240, 240, 240);
+$gray-248: rgb(248, 248, 248);
+
+$black: #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+
+$grays: map-merge(
+  (
+    "8":  $gray-8,
+    "16":  $gray-16,
+    "24":  $gray-24,
+    "32":  $gray-32,
+    "40":  $gray-40,
+    "48":  $gray-48,
+    "56":  $gray-56,
+    "64":  $gray-64,
+    "72":  $gray-72,
+    "80":  $gray-80,
+    "88":  $gray-88,
+    "96":  $gray-96,
+    "104":  $gray-104,
+    "112":  $gray-112,
+    "120":  $gray-120,
+    "128":  $gray-128,
+    "136":  $gray-136,
+    "144":  $gray-144,
+    "152":  $gray-152,
+    "160":  $gray-160,
+    "168":  $gray-168,
+    "170":  $gray-176,
+    "184":  $gray-184,
+    "192":  $gray-192,
+    "200":  $gray-200,
+    "208":  $gray-208,
+    "216":  $gray-216,
+    "224":  $gray-224,
+    "232":  $gray-232,
+    "240":  $gray-240,
+    "248":  $gray-248,
+  ),
+  $grays
+);
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue": $blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray-104,
+    "gray-dark": $gray-48
+  ),
+  $colors
+);
+
+$primary: $blue !default;
+$secondary: $gray-104 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-248 !default;
+$dark: $gray-48 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark
+  ),
+  $theme-colors
+);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval: 8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $gray-32 !default;
+$yiq-text-light: $white !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25
+    ),
+    2: (
+      $spacer * 0.5
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5
+    ),
+    5: (
+      $spacer * 3
+    )
+  ),
+  $spacers
+);
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grid-breakpoints: map-merge(
+  (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+  ),
+  $grid-breakpoints
+);
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$container-max-widths: map-merge(
+  (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+  ),
+  $container-max-widths
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// custom variables
+$box-shadow: 0 4px 6px -1px rgba($black, 0.1), 0 2px 4px -1px rgba($black, 0.06);
+$box-shadow-white: 0 4px 6px -1px rgba($white, 0.1), 0 2px 4px -1px rgba($white, 0.06);
+$duration: 0.3s;
+$transition: ease;
+$border-radius: 0.5 * $spacer;

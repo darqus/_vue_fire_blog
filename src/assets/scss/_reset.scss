@@ -1,0 +1,13 @@
+html {
+  box-sizing: border-box;
+  // hyphens: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.05rem;
+}

@@ -1,0 +1,107 @@
+@import "font";
+@import "reset";
+@import "utilities/functions";
+@import "variables";
+@import "utilities/breakpoints";
+@import "grid";
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+} */
+
+.link {
+  color: $black;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color $duration $transition;
+
+  svg {
+    transition: transform $duration $transition;
+  }
+
+  &:hover {
+    margin-right: 0;
+    color: rgba($black, 0.8);
+
+    svg {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &-light {
+    color: $white;
+  }
+}
+
+.arrow {
+  width: 12px;
+  margin-left: 8px;
+
+  path {
+    fill: $black;
+  }
+
+  &-light {
+    path {
+      fill: $white;
+    }
+  }
+}
+
+input {
+  width: 100%;
+}
+
+.button {
+  padding: 0.75 * $spacer 1.5 * $spacer;
+  font-size: 13px;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: $black;
+  border: none;
+  border-radius: 20px;
+  transition: background-color $duration $transition;
+
+  &-light {
+    color: $white;
+    background-color: transparent;
+    border: 2px solid $white;
+  }
+
+  &:hover {
+    background-color: rgba($black, 0.8);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.inactive,
+  &:disabled {
+    color: rgba($white, 0.5);
+    pointer-events: none;
+    cursor: initial;
+    background-color: rgba($black, 0.5);
+  }
+}
+
+.error {
+  font-size: 12px;
+  color: $red;
+  text-align: center;
+}
+
+.date {
+  color: $gray-144;
+}
