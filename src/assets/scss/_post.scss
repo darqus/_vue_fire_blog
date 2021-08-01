@@ -115,6 +115,10 @@
           line-height: 1.1;
         }
 
+        h1 {
+          font-size: 2 * $spacer;
+        }
+
         code {
           color: $gray-104;
           background-color: rgba($gray-104, 0.1);
