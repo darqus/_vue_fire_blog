@@ -2,6 +2,7 @@
 
 ## Project setup
 ```
+$ yarn install
 $ npm i
 $ npm i --legacy-peer-deps
 ```
