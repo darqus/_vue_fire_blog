@@ -26,6 +26,12 @@
         @input="updateBlogContent($event)"
       />
       <div class="blog-actions">
+        <button
+          class="button"
+          :disabled="emptyBlog"
+          @click="$store.commit('clearPost')"
+          v-text="'Clear Post'"
+        />
         <router-link
           class="button"
           :class="{ inactive: emptyBlog }"
@@ -37,7 +43,7 @@
           class="button"
           :disabled="emptyBlog"
           @click="$store.dispatch('blogUpdatePost', $route.params.id)"
-          v-text="'Save Changes'"
+          v-text="'Update Post'"
         />
       </div>
       <div />
