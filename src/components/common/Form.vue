@@ -16,7 +16,9 @@
         :key="name"
         class="input"
       >
-        <label v-if="form.showLabels" :for="name" v-text="label" />
+        <template v-if="form.showLabels">
+          <label :for="name" v-text="label" />
+        </template>
         <input
           :id="name"
           v-model="inputs[index].value"
@@ -29,13 +31,14 @@
           :disabled="disabled"
           @input="checkValidity"
         >
-        <label
-          v-if="form.showLabels"
-          v-show="!new RegExp(pattern).test(inputs[index].value)"
-          class="error"
-          :for="name"
-          v-text="title"
-        />
+        <template v-if="form.showLabels">
+          <label
+            v-show="!new RegExp(pattern).test(inputs[index].value)"
+            class="error"
+            :for="name"
+            v-text="title"
+          />
+        </template>
         <div class="icon" :class="{ 'with-labels': form.showLabels }">
           <adminIcon v-if="icon === 'adminIcon'" :class="iconClassName" />
           <email v-if="icon === 'email'" :class="iconClassName" />
@@ -77,6 +80,7 @@ export default {
       type: Object,
       required: true,
     },
+    loading: Boolean,
   },
   data: () => ({
     isValidForm: false,
