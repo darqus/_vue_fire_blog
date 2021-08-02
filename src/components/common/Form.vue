@@ -70,6 +70,7 @@ export default {
   },
   data: () => ({
     isValidForm: false,
+    timeoutID: null,
   }),
   computed: {
     inputs() {
@@ -78,9 +79,11 @@ export default {
   },
   methods: {
     checkValidity() {
-      setTimeout(() => {
-        this.isValidForm = this.$refs.form.checkValidity()
-      }, 500)
+      clearTimeout(this.timeoutID)
+      this.timeoutID = setTimeout(this.ckeckIsValidForm, 500)
+    },
+    ckeckIsValidForm() {
+      this.isValidForm = this.$refs.form.checkValidity()
     },
   },
 }
