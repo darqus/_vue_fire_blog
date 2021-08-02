@@ -1,5 +1,5 @@
-$form-width: 290px;
-$form-width-mobile: initial;
+$form-width-min: 290px;
+$form-width-max: 500px;
 
 .form-wrapper {
   display: grid;
@@ -45,13 +45,11 @@ $form-width-mobile: initial;
     }
 
     h2 {
-      max-width: $form-width;
       font-size: 1.3 * $spacer;
       color: $gray-48;
       text-align: center;
 
       @include media-breakpoint-down(sm) {
-        max-width: $form-width-mobile;
         font-size: 1.1 * $spacer;
       }
     }
@@ -115,19 +113,20 @@ $form-width-mobile: initial;
 .profile,
 .admin {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($form-width-min, $form-width-max));
+  place-items: center;
+  place-content: center;
+  text-align: center;
+
+  @include media-breakpoint-down(sm) {
+    place-items: center stretch;
+    place-content: center stretch;
+    font-size: 0.9 * $spacer;
+  }
 
   .container {
     display: grid;
     grid-gap: 1.2 * $spacer;
-    place-items: center;
-    place-content: center;
-    text-align: center;
-
-    @include media-breakpoint-down(sm) {
-      place-items: center stretch;
-      place-content: center stretch;
-      font-size: 0.9 * $spacer;
-    }
 
     h2 {
       font-size: 32px;
@@ -244,12 +243,5 @@ form {
         }
       }
     }
-  }
-
-  &.profile-info,
-  &.admin-info {
-    grid-gap: 1.2 * $spacer;
-    place-items: center stretch;
-    border-radius: $border-radius;
   }
 }
