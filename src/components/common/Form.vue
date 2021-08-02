@@ -79,7 +79,7 @@ export default {
   },
   methods: {
     checkValidity() {
-      clearTimeout(this.timeoutID)
+      this.timeoutID = null
       this.timeoutID = setTimeout(this.ckeckIsValidForm, 500)
     },
     ckeckIsValidForm() {
