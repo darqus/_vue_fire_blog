@@ -18,20 +18,6 @@
       >
         <template v-if="form.showLabels">
           <label :for="name" v-text="label" />
-        </template>
-        <input
-          :id="name"
-          v-model="inputs[index].value"
-          :type="type"
-          :placeholder="label"
-          :name="name"
-          :pattern="pattern"
-          :title="title"
-          :required="required"
-          :disabled="disabled"
-          @input="checkValidity"
-        >
-        <template v-if="form.showLabels">
           <label
             v-show="!new RegExp(pattern).test(inputs[index].value)"
             class="error"
@@ -39,11 +25,25 @@
             v-text="title"
           />
         </template>
-        <div class="icon" :class="{ 'with-labels': form.showLabels }">
-          <adminIcon v-if="icon === 'adminIcon'" :class="iconClassName" />
-          <email v-if="icon === 'email'" :class="iconClassName" />
-          <user v-if="icon === 'user'" :class="iconClassName" />
-          <password v-if="icon === 'password'" :class="iconClassName" />
+        <div class="input-row">
+          <input
+            :id="name"
+            v-model="inputs[index].value"
+            :type="type"
+            :placeholder="label"
+            :name="name"
+            :pattern="pattern"
+            :title="title"
+            :required="required"
+            :disabled="disabled"
+            @input="checkValidity"
+          >
+          <div class="icon">
+            <adminIcon v-if="icon === 'adminIcon'" :class="iconClassName" />
+            <email v-if="icon === 'email'" :class="iconClassName" />
+            <user v-if="icon === 'user'" :class="iconClassName" />
+            <password v-if="icon === 'password'" :class="iconClassName" />
+          </div>
         </div>
       </div>
     </div>

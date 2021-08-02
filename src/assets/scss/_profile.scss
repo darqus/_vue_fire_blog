@@ -188,44 +188,54 @@ form {
     grid-gap: 0.8 * $spacer;
 
     .input {
-      position: relative;
       display: grid;
       grid-gap: 0.3 * $spacer;
-      place-items: center;
 
-      input {
-        padding: 10px 10px 10px 45px;
-        font-size: $spacer;
-        background-color: $gray-248;
-        border: 1px solid $gray-232;
-        border-radius: 7px;
-        transition: border-color $duration $transition;
+      label {
+        display: grid;
+        justify-self: start;
+        font-size: 14px;
+        color: $gray-104;
 
-        &:focus {
-          outline: none;
-        }
-
-        &:valid {
-          border-color: rgba($green, 0.5);
-        }
-
-        &:invalid {
-          border-color: rgba($red, 0.5);
-        }
-
-        &:disabled {
-          color: $gray-160;
+        &.error {
+          font-size: 12px;
+          color: $red;
         }
       }
 
-      .icon {
-        position: absolute;
-        top: 12px;
-        left: 20px;
-        width: 12px;
+      .input-row {
+        position: relative;
 
-        &.with-labels {
-          top: 2 * $spacer;
+        input {
+          padding: 10px 10px 10px 45px;
+          font-size: $spacer;
+          background-color: $gray-248;
+          border: 1px solid $gray-232;
+          border-radius: 7px;
+          transition: border-color $duration $transition;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:valid {
+            border-color: rgba($green, 0.5);
+          }
+
+          &:invalid {
+            border-color: rgba($red, 0.5);
+          }
+
+          &:disabled {
+            color: $gray-160;
+          }
+        }
+
+        .icon {
+          position: absolute;
+          top: 0.7 * $spacer;
+          left: 20px;
+          width: 12px;
 
           .disabled {
             path {
@@ -242,16 +252,5 @@ form {
     grid-gap: 1.2 * $spacer;
     place-items: center stretch;
     border-radius: $border-radius;
-
-    label {
-      display: grid;
-      justify-self: start;
-      font-size: 14px;
-      color: $gray-104;
-
-      &.error {
-        color: $red;
-      }
-    }
   }
 }
