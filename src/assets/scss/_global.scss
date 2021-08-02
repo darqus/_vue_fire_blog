@@ -62,6 +62,10 @@ input {
 }
 
 .button {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  grid-gap: 0.75 * $spacer;
   padding: 0.75 * $spacer 1.5 * $spacer;
   font-size: 13px;
   color: $white;

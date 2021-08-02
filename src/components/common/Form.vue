@@ -37,13 +37,14 @@
         </div>
       </div>
     </div>
-
     <button
       class="button"
       type="submit"
       :disabled="!isValidForm"
-      v-text="form.submitButtonText || 'Sibmit'"
-    />
+    >
+      <div v-text="form.submitButtonText || 'Sibmit'" />
+      <LoadingBtn v-show="loadingValidity" />
+    </button>
   </form>
 </template>
 
@@ -53,6 +54,7 @@ import user from '@/assets/icons/user-alt-light.svg'
 import email from '@/assets/icons/envelope-regular.svg'
 import password from '@/assets/icons/lock-alt-solid.svg'
 
+import LoadingBtn from '@/components/LoadingBtn.vue'
 
 export default {
   name: 'Form',
@@ -61,6 +63,7 @@ export default {
     user,
     email,
     password,
+    LoadingBtn,
   },
   props: {
     form: {
@@ -70,6 +73,7 @@ export default {
   },
   data: () => ({
     isValidForm: false,
+    loadingValidity: false,
     timeoutID: null,
   }),
   computed: {
@@ -79,11 +83,12 @@ export default {
   },
   methods: {
     checkValidity() {
-      this.timeoutID = null
+      this.loadingValidity = true
       this.timeoutID = setTimeout(this.ckeckIsValidForm, 500)
     },
     ckeckIsValidForm() {
       this.isValidForm = this.$refs.form.checkValidity()
+      this.loadingValidity = false
     },
   },
 }

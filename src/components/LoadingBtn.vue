@@ -1,11 +1,11 @@
 <template>
-  <div class="loading">
+  <div class="loading-btn">
     <div class="spinner" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Loading',
+  name: 'LoadingBtn',
 }
 </script>
