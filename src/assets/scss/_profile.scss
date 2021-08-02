@@ -194,11 +194,15 @@ form {
       justify-self: start;
       font-size: 14px;
       color: $gray-104;
+
+      &.error {
+        color: $red;
+      }
     }
 
     .icon {
       position: absolute;
-      bottom: 10px;
+      top: 2 * $spacer;
       left: 20px;
       width: 12px;
 
@@ -245,10 +249,6 @@ form {
         position: absolute;
         left: 20px;
         width: 12px;
-
-        /*         &.loading {
-          opacity: 0.5;
-        } */
       }
     }
   }

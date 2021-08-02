@@ -29,6 +29,12 @@
           :disabled="disabled"
           @input="checkValidity"
         >
+        <label
+          v-show="!new RegExp(pattern).test(inputs[index].value)"
+          class="error"
+          :for="name"
+          v-text="title"
+        />
         <div class="icon">
           <adminIcon v-if="icon === 'adminIcon'" :class="iconClassName" />
           <email v-if="icon === 'email'" :class="iconClassName" />
