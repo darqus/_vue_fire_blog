@@ -6,7 +6,7 @@
       <Footer v-if="!navigation" :admin="admin" />
     </section>
     <Modal v-if="modal.active" :message="modal.message" @close="close" />
-    <Loading v-if="loading" />
+    <Loading v-if="!loading" />
   </main>
 </template>
 
