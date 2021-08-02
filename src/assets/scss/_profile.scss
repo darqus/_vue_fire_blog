@@ -183,37 +183,6 @@ form {
   display: grid;
   grid-gap: 1.2 * $spacer;
 
-  &.profile-info,
-  &.admin-info {
-    grid-gap: 1.2 * $spacer;
-    place-items: center stretch;
-    border-radius: $border-radius;
-
-    label {
-      display: grid;
-      justify-self: start;
-      font-size: 14px;
-      color: $gray-104;
-
-      &.error {
-        color: $red;
-      }
-    }
-
-    .icon {
-      position: absolute;
-      top: 2 * $spacer;
-      left: 20px;
-      width: 12px;
-
-      .disabled {
-        path {
-          fill: $gray-104;
-        }
-      }
-    }
-  }
-
   .inputs {
     display: grid;
     grid-gap: 0.8 * $spacer;
@@ -243,6 +212,10 @@ form {
         &:invalid {
           border-color: rgba($red, 0.5);
         }
+
+        &:disabled {
+          color: $gray-160;
+        }
       }
 
       .icon {
@@ -250,6 +223,34 @@ form {
         top: 12px;
         left: 20px;
         width: 12px;
+
+        &.with-labels {
+          top: 2 * $spacer;
+
+          .disabled {
+            path {
+              fill: $gray-160;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.profile-info,
+  &.admin-info {
+    grid-gap: 1.2 * $spacer;
+    place-items: center stretch;
+    border-radius: $border-radius;
+
+    label {
+      display: grid;
+      justify-self: start;
+      font-size: 14px;
+      color: $gray-104;
+
+      &.error {
+        color: $red;
       }
     }
   }

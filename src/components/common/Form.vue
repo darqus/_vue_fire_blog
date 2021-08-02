@@ -30,12 +30,13 @@
           @input="checkValidity"
         >
         <label
+          v-if="form.showLabels"
           v-show="!new RegExp(pattern).test(inputs[index].value)"
           class="error"
           :for="name"
           v-text="title"
         />
-        <div class="icon">
+        <div class="icon" :class="{ 'with-labels': form.showLabels }">
           <adminIcon v-if="icon === 'adminIcon'" :class="iconClassName" />
           <email v-if="icon === 'email'" :class="iconClassName" />
           <user v-if="icon === 'user'" :class="iconClassName" />
