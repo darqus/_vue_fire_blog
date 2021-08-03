@@ -35,7 +35,7 @@ $form-width-max: 350px;
       }
 
       a {
-        color: $gray-48;
+        color: map-get($grays, 6);
         transition: color $duration $transition;
 
         &:hover {
@@ -46,7 +46,7 @@ $form-width-max: 350px;
 
     h2 {
       font-size: 1.3 * $spacer;
-      color: $gray-48;
+      color: map-get($grays, 6);
       text-align: center;
 
       @include media-breakpoint-down(sm) {
@@ -140,7 +140,7 @@ $form-width-max: 350px;
       height: 80px;
       font-size: 32px;
       color: $white;
-      background-color: $gray-48;
+      background-color: map-get($grays, 6);
       border-radius: 50%;
       place-self: center;
 
@@ -199,7 +199,7 @@ form {
         input {
           padding: 10px 10px 10px 45px;
           font-size: $spacer;
-          background-color: $gray-248;
+          background-color: map-get($grays, 31);
           border: 1px solid $gray-232;
           border-radius: 7px;
           transition: border-color $duration $transition;
@@ -217,7 +217,7 @@ form {
           }
 
           &:disabled {
-            color: $gray-160;
+            color: map-get($grays, 20);
           }
         }
 
@@ -229,7 +229,7 @@ form {
 
           .disabled {
             path {
-              fill: $gray-160;
+              fill: map-get($grays, 20);
             }
           }
         }

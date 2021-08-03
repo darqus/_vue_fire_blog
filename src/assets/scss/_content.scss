@@ -4,16 +4,16 @@
     grid-gap: 1 * $spacer;
 
     &:nth-child(even) {
-      background-color: $gray-248;
+      background-color: map-get($grays, 31);
     }
 
     &:nth-child(odd) {
-      background-color: $gray-232;
+      background-color: map-get($grays, 29);
     }
 
     &.no-user {
       color: $white;
-      background-color: $gray-48;
+      background-color: map-get($grays, 6);
     }
 
     .container {
@@ -45,7 +45,7 @@
           transition: border-bottom-color $duration $transition;
 
           &:hover {
-            border-bottom-color: $gray-48;
+            border-bottom-color: map-get($grays, 6);
           }
         } */
 
@@ -71,7 +71,7 @@
 .blog-card-wrapper {
   display: grid;
   grid-gap: 1 * $spacer;
-  background-color: $gray-48;
+  background-color: map-get($grays, 6);
 
   &.home {
     grid-gap: 3 * $spacer;
@@ -96,7 +96,7 @@
       width: 80px;
       height: 30px;
       cursor: pointer;
-      background-color: $gray-104;
+      background-color: map-get($grays, 13);
       border: none;
       border-radius: 20px;
       outline: none;
@@ -110,7 +110,7 @@
         width: 30px;
         height: 30px;
         content: "";
-        background-color: $gray-48;
+        background-color: map-get($grays, 6);
         border: $white solid 2px;
         border-radius: 20px;
         box-shadow: $box-shadow;
@@ -160,7 +160,7 @@
           place-items: center;
           width: 35px;
           height: 35px;
-          background-color: $gray-48;
+          background-color: map-get($grays, 6);
           border-radius: 50%;
           box-shadow: $box-shadow;
           transition: background-color $duration $transition;
@@ -171,7 +171,7 @@
           }
 
           &:hover {
-            background-color: $gray-104;
+            background-color: map-get($grays, 13);
             box-shadow: $box-shadow-white;
           }
 
@@ -231,7 +231,7 @@
 .home .updates {
   display: grid;
   grid-gap: 3 * $spacer;
-  background-color: $gray-216;
+  background-color: map-get($grays, 27);
 
   .row {
     display: grid;

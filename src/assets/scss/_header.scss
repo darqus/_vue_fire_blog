@@ -151,7 +151,7 @@
           grid-gap: $spacer;
           place-items: center start;
           padding: $spacer;
-          background-color: $gray-88;
+          background-color: map-get($grays, 11);
 
           .option {
             display: grid;
