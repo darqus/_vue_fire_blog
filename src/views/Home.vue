@@ -3,7 +3,6 @@
     <div class="blog-wrapper">
       <div v-if="!user" class="blog-content" :class="{ 'no-user': !user }">
         <div class="container">
-          <div />
           <BlogPost
             :id="welcomePost.id"
             :is-welcome="welcomePost.isWelcome"
@@ -11,13 +10,11 @@
             :content="welcomePost.content"
             :image="welcomePost.image"
           />
-          <div />
         </div>
       </div>
       <template v-if="blogPostsFeed.length">
         <div v-for="{ id, title, content, date, image } in blogPostsFeed" :key="id" class="blog-content">
           <div class="container">
-            <div />
             <BlogPost
               :id="id"
               :title="title"
@@ -25,14 +22,12 @@
               :date="date"
               :image="image"
             />
-            <div />
           </div>
         </div>
       </template>
     </div>
     <div v-if="blogPostsCards.length" class="blog-card-wrapper home">
-      <div />
-      <div class="container blog-card-container">
+      <div class="container gap-3">
         <h3 class="blog-card-header">
           View More Recent Blogs
         </h3>
@@ -47,16 +42,17 @@
           />
         </div>
       </div>
-      <div />
     </div>
     <div v-if="!user" class="updates">
-      <div class="container">
-        <h2 class="updates-header">
-          Never miss a post. Register for your free account today.
-        </h2>
-        <router-link class="button" :to="{ name: 'Register' }">
-          Register for {{ appName }} <Arrow class="arrow arrow-light" />
-        </router-link>
+      <div class="container gap-3">
+        <div class="row">
+          <h2 class="updates-header">
+            Never miss a post. Register for your free account today.
+          </h2>
+          <router-link class="button" :to="{ name: 'Register' }">
+            Register for {{ appName }} <Arrow class="arrow arrow-light" />
+          </router-link>
+        </div>
       </div>
     </div>
   </div>

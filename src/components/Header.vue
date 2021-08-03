@@ -1,6 +1,5 @@
 <template>
   <header class="header">
-    <div />
     <div class="container">
       <nav class="nav nav-header">
         <div class="branding">
@@ -22,7 +21,6 @@
         <Navigation v-show="showMobileNav" :admin="admin" class="nav-mobile" contain-main is-footer />
       </transition>
     </div>
-    <div />
   </header>
 </template>
 

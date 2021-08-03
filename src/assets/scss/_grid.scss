@@ -19,12 +19,41 @@ body {
       grid-gap: 0 $spacer;
 
       .container {
-        width: 100%;
-        max-width: 1140px;
+        display: grid;
+        grid-row-gap: 1.2 * $spacer;
         padding-right: 1.5 * $spacer;
         padding-left: 1.5 * $spacer;
         margin-right: auto;
         margin-left: auto;
+
+        @include media-breakpoint-up(xl) {
+          grid-template-columns: repeat(auto-fit, minmax(map-get($grid-breakpoints, lg), map-get($grid-breakpoints, xl)));
+        }
+
+        @include media-breakpoint-only(lg) {
+          grid-template-columns: repeat(auto-fit, minmax(map-get($grid-breakpoints, md), map-get($grid-breakpoints, lg)));
+        }
+
+        @include media-breakpoint-only(md) {
+          grid-template-columns: repeat(auto-fit, minmax(map-get($grid-breakpoints, sm), map-get($grid-breakpoints, md)));
+        }
+
+        @include media-breakpoint-down(sm) {
+          grid-template-columns: repeat(auto-fit, minmax(map-get($grid-breakpoints, xs), map-get($grid-breakpoints, sm)));
+        }
+
+        &.gap-2 {
+          grid-row-gap: 2 * $spacer;
+        }
+
+        &.gap-3 {
+          grid-row-gap: 3 * $spacer;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+        }
       }
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="admin">
-    <div class="container">
+    <div class="container form">
       <h2>Administration</h2>
 
       <h3 class="subheader">

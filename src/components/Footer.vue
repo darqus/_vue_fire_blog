@@ -1,20 +1,20 @@
 <template>
   <footer class="footer">
-    <div />
     <div class="container">
-      <div class="left">
-        <div class="col-1">
-          <Logo class="logo" />
+      <div class="row">
+        <div class="left">
+          <div class="col-1">
+            <Logo class="logo" />
+          </div>
+          <div class="col-2">
+            <Navigation is-footer />
+          </div>
         </div>
-        <div class="col-2">
-          <Navigation is-footer />
+        <div class="right">
+          <small v-text="copy" />
         </div>
-      </div>
-      <div class="right">
-        <small v-text="copy" />
       </div>
     </div>
-    <div />
   </footer>
 </template>
 

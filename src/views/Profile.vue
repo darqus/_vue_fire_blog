@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <div class="container">
+    <div class="container form">
       <h2>Account Settings</h2>
 
       <div v-if="profile.initials" class="initials">
