@@ -66,6 +66,7 @@ export default {
   computed: {
     ...mapState({
       blog: (state) => state.blog,
+      isEditedPost: (state) => state.isEditedPost,
     }),
     emptyBlog() {
       const emptyBlog = validatePost(this.blog?.title, this.blog?.content)
@@ -73,7 +74,9 @@ export default {
     },
   },
   created() {
-    this.clearPost()
+    if (!this.isEditedPost) {
+      this.clearPost()
+    }
   },
   methods: {
     ...mapMutations(
