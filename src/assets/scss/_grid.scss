@@ -7,11 +7,8 @@ body {
     grid-template-rows: auto 1fr auto;
     height: 100vh;
 
-    > header,
-    > footer,
     > section {
       display: grid;
-      grid-gap: 0 $spacer;
     }
   }
 
