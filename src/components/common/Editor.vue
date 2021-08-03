@@ -174,8 +174,6 @@ export default {
       ],
       content: this.value,
       autofocus: true,
-      editable: true,
-      injectCSS: false,
       onUpdate: () => {
         // HTML
         this.$emit('input', this.editor.getHTML())
