@@ -15,7 +15,7 @@
             @click="$route.params.id
               ? $store.dispatch('blogUpdatePost', $route.params.id)
               : $store.dispatch('blogCreate')"
-            v-text="'Save Changes'"
+            v-text="$route.params.id ? 'Update Post' : 'Publish'"
           />
         </div>
       </div>
