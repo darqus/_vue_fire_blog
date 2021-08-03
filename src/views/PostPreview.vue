@@ -12,7 +12,9 @@
           <button class="button" @click="$router.go(-1)" v-text="'Return to Edit'" />
           <button
             class="button"
-            @click="$store.dispatch('blogUpdatePost', $route.params.id)"
+            @click="$route.params.id
+              ? $store.dispatch('blogUpdatePost', $route.params.id)
+              : $store.dispatch('blogCreate')"
             v-text="'Save Changes'"
           />
         </div>
