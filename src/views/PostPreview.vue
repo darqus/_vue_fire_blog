@@ -1,22 +1,22 @@
 <template>
   <div class="post-view">
-    <div class="container">
-      <div />
-      <h2 class="post-view-title" v-text="$store.state.blog.title" />
-      <!-- <img :src="blogCoverPhoto" alt="" /> -->
-      <div class="post-view-date">
-        <small class="date" v-text="formatDate(new Date())" />
+    <div class="container row-gap-2">
+      <div class="row">
+        <h2 class="post-view-title" v-text="$store.state.blog.title" />
+        <!-- <img :src="blogCoverPhoto" alt="" /> -->
+        <div class="post-view-date">
+          <small class="date" v-text="formatDate(new Date())" />
+        </div>
+        <div class="post-view-content" v-html="$store.state.blog.content" />
+        <div class="post-view-actions">
+          <button class="button" @click="$router.go(-1)" v-text="'Return to Edit'" />
+          <button
+            class="button"
+            @click="$store.dispatch('blogUpdatePost', $route.params.id)"
+            v-text="'Save Changes'"
+          />
+        </div>
       </div>
-      <div class="post-view-content" v-html="$store.state.blog.content" />
-      <div class="post-view-actions">
-        <button class="button" @click="$router.go(-1)" v-text="'Return to Edit'" />
-        <button
-          class="button"
-          @click="$store.dispatch('blogUpdatePost', $route.params.id)"
-          v-text="'Save Changes'"
-        />
-      </div>
-      <div />
     </div>
   </div>
 </template>

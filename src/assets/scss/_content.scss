@@ -1,8 +1,5 @@
 .blog-wrapper {
   .blog-content {
-    display: grid;
-    grid-gap: 1 * $spacer;
-
     &:nth-child(even) {
       background-color: map-get($grays, 31);
     }
@@ -11,19 +8,8 @@
       background-color: map-get($grays, 29);
     }
 
-    &.no-user {
-      color: $white;
-      background-color: map-get($grays, 6);
-    }
-
     .container {
-      display: grid;
-      grid-gap: 2 * $spacer;
-
       .content {
-        display: grid;
-        grid-gap: 2 * $spacer;
-
         .content-header {
           font-size: 40px;
           font-weight: 300;
@@ -69,13 +55,7 @@
 }
 
 .blog-card-wrapper {
-  display: grid;
-  grid-gap: 1 * $spacer;
   background-color: map-get($grays, 6);
-
-  &.home {
-    grid-gap: 3 * $spacer;
-  }
 
   .blog-card-header {
     font-size: 28px;
@@ -229,10 +209,6 @@
 }
 
 .home .updates {
-  display: grid;
-  grid-gap: 3 * $spacer;
-  background-color: map-get($grays, 27);
-
   .row {
     display: grid;
     grid-auto-flow: column;

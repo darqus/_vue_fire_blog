@@ -1,14 +1,14 @@
 <template>
   <div class="post-view">
-    <div v-if="blog" class="container">
-      <div />
-      <h2 class="post-view-title" v-text="blog.title" />
-      <div class="post-view-date">
-        <small class="date" v-text="`Posted on: ${formatDate(blog.date)}`" />
+    <div v-if="blog" class="container row-gap-2">
+      <div class="row">
+        <h2 class="post-view-title" v-text="blog.title" />
+        <div class="post-view-date">
+          <small class="date" v-text="`Posted on: ${formatDate(blog.date)}`" />
+        </div>
+        <!-- <img :src="blog.coverPhoto" alt="blog.title"> -->
+        <div class="post-view-content" v-html="blog.content" />
       </div>
-      <!-- <img :src="blog.coverPhoto" alt="blog.title"> -->
-      <div class="post-view-content" v-html="blog.content" />
-      <div />
     </div>
   </div>
 </template>

@@ -9,20 +9,18 @@ $form-width-max: 350px;
 
   @include media-breakpoint-down(sm) {
     grid-template-columns: initial;
-    padding-right: initial;
-    padding-left: initial;
   }
 
   .form {
     position: relative;
+    display: grid;
+    grid-gap: 1.2 * $spacer;
     place-items: center;
-    padding-right: initial;
-    padding-left: initial;
-    text-align: center;
     place-content: center;
+    text-align: center;
 
     @include media-breakpoint-down(sm) {
-      place-items: center stretch;
+      // place-items: center stretch;
       font-size: 0.9 * $spacer;
       place-content: center stretch;
     }
@@ -113,57 +111,62 @@ $form-width-max: 350px;
 .profile,
 .admin {
   display: grid;
+  place-content: center;
+  background-color: map-get($grays, 30);
 
   .form {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax($form-width-min, $form-width-max));
-    grid-gap: 1.2 * $spacer;
-    place-content: center;
 
-    h2 {
-      font-size: 32px;
-      font-weight: 300;
-      text-align: center;
-    }
-
-    .subheader {
-      font-size: 1.5 * $spacer;
-      font-weight: 300;
-      text-align: center;
-    }
-
-    .initials {
-      position: initial;
+    .row {
       display: grid;
-      place-items: center;
-      width: 80px;
-      height: 80px;
-      font-size: 32px;
-      color: $white;
-      background-color: map-get($grays, 6);
-      border-radius: 50%;
-      place-self: center;
+      grid-gap: 1.2 * $spacer;
 
-      > div {
-        user-select: none;
+      h2 {
+        font-size: 32px;
+        font-weight: 300;
+        text-align: center;
       }
-    }
 
-    .admin-badge {
-      padding: 8px 18px;
-      font-size: 14px;
-      color: $white;
-      text-align: center;
-      text-transform: capitalize;
-      user-select: none;
-      background-color: $gray-104;
-      border-radius: $border-radius;
-      place-self: center;
+      .subheader {
+        font-size: 1.5 * $spacer;
+        font-weight: 300;
+        text-align: center;
+      }
 
-      > .admin-icon {
-        width: 14px;
-        height: auto;
-        margin-right: 8px;
+      .initials {
+        position: initial;
+        display: grid;
+        place-items: center;
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
+        color: $white;
+        background-color: map-get($grays, 6);
+        border-radius: 50%;
+        place-self: center;
+
+        > div {
+          user-select: none;
+        }
+      }
+
+      .admin-badge {
+        padding: 8px 18px;
+        font-size: 14px;
+        color: $white;
+        text-align: center;
+        text-transform: capitalize;
+        user-select: none;
+        background-color: $gray-104;
+        border-radius: $border-radius;
+        place-self: center;
+
+        > .admin-icon {
+          width: 14px;
+          height: auto;
+          margin-right: 8px;
+        }
       }
     }
   }

@@ -1,23 +1,25 @@
 <template>
   <div class="profile">
-    <div class="container form">
-      <h2>Account Settings</h2>
+    <div class="form">
+      <div class="row">
+        <h2>Account Settings</h2>
 
-      <div v-if="profile.initials" class="initials">
-        <div v-text="profile.initials" />
+        <div v-if="profile.initials" class="initials">
+          <div v-text="profile.initials" />
+        </div>
+
+        <div v-if="profile.admin" class="admin-badge">
+          <adminIcon class="admin-icon" />
+          <span>admin</span>
+        </div>
+
+        <Form
+          :form="form"
+          class="profile-info"
+          :loading="loading"
+          @submit="updateProfile"
+        />
       </div>
-
-      <div v-if="profile.admin" class="admin-badge">
-        <adminIcon class="admin-icon" />
-        <span>admin</span>
-      </div>
-
-      <Form
-        :form="form"
-        class="profile-info"
-        :loading="loading"
-        @submit="updateProfile"
-      />
     </div>
   </div>
 </template>

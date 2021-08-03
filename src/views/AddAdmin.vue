@@ -1,18 +1,20 @@
 <template>
   <div class="admin">
-    <div class="container form">
-      <h2>Administration</h2>
+    <div class="form">
+      <div class="row">
+        <h2>Administration</h2>
 
-      <h3 class="subheader">
-        Add Admin
-      </h3>
+        <h3 class="subheader">
+          Add Admin
+        </h3>
 
-      <Form
-        :form="form"
-        class="admin-info"
-        :loading="$store.state.loading"
-        @submit="$store.dispatch('userAddAdmin', form.inputs[0].value)"
-      />
+        <Form
+          :form="form"
+          class="admin-info"
+          :loading="$store.state.loading"
+          @submit="$store.dispatch('userAddAdmin', form.inputs[0].value)"
+        />
+      </div>
     </div>
   </div>
 </template>

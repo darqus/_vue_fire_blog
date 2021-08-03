@@ -5,9 +5,6 @@
   background-color: map-get($grays, 6);
 
   .container {
-    display: grid;
-    grid-gap: 2.5 * $spacer;
-
     .blog-info {
       input {
         padding: 10px 20px;

@@ -1,25 +1,27 @@
 <template>
   <header class="header">
     <div class="container">
-      <nav class="nav nav-header">
-        <div class="branding">
-          <Logo class="logo" />
-        </div>
-        <div class="nav-links">
-          <Navigation v-show="!isMobile" :admin="admin" />
-          <div
-            v-show="isMobile"
-            ref="mobileMenu"
-            class="mobile-menu"
-            @click="toggleShowMobileNav"
-          >
-            <menuIcon class="menu-icon" />
+      <div class="row">
+        <nav class="nav nav-header">
+          <div class="branding">
+            <Logo class="logo" />
           </div>
-        </div>
-      </nav>
-      <transition name="nav-mobile">
-        <Navigation v-show="showMobileNav" :admin="admin" class="nav-mobile" contain-main is-footer />
-      </transition>
+          <div class="nav-links">
+            <Navigation v-show="!isMobile" :admin="admin" />
+            <div
+              v-show="isMobile"
+              ref="mobileMenu"
+              class="mobile-menu"
+              @click="toggleShowMobileNav"
+            >
+              <menuIcon class="menu-icon" />
+            </div>
+          </div>
+        </nav>
+        <transition name="nav-mobile">
+          <Navigation v-show="showMobileNav" :admin="admin" class="nav-mobile" contain-main is-footer />
+        </transition>
+      </div>
     </div>
   </header>
 </template>

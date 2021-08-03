@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div class="blog-wrapper">
-      <div v-if="!user" class="blog-content" :class="{ 'no-user': !user }">
-        <div class="container">
+      <div v-if="!user" class="blog-content">
+        <div class="container row-gap-3" :class="{ 'bg-gray-6': !user }">
           <BlogPost
             :id="welcomePost.id"
             :is-welcome="welcomePost.isWelcome"
@@ -26,25 +26,27 @@
         </div>
       </template>
     </div>
-    <div v-if="blogPostsCards.length" class="blog-card-wrapper home">
-      <div class="container gap-3">
-        <h3 class="blog-card-header">
-          View More Recent Blogs
-        </h3>
-        <div class="blog-cards">
-          <BlogCard
-            v-for="{ id, title, image, date } in blogPostsCards"
-            :id="id"
-            :key="id"
-            :title="title"
-            :image="image"
-            :date="date"
-          />
+    <div v-if="blogPostsCards.length" class="blog-card-wrapper">
+      <div class="container row-gap-3 bg-gray-6">
+        <div class="row">
+          <h3 class="blog-card-header">
+            View More Recent Blogs
+          </h3>
+          <div class="blog-cards">
+            <BlogCard
+              v-for="{ id, title, image, date } in blogPostsCards"
+              :id="id"
+              :key="id"
+              :title="title"
+              :image="image"
+              :date="date"
+            />
+          </div>
         </div>
       </div>
     </div>
     <div v-if="!user" class="updates">
-      <div class="container gap-3">
+      <div class="container row-gap-3 bg-gray-27">
         <div class="row">
           <h2 class="updates-header">
             Never miss a post. Register for your free account today.

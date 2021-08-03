@@ -1,6 +1,6 @@
 <template>
   <div class="form-wrapper">
-    <div class="container form">
+    <div class="form">
       <h1><Logo /></h1>
       <div class="login-register">
         Don't have an account?

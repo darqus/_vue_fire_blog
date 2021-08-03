@@ -1,60 +1,51 @@
 body {
-  display: grid;
-  grid-template-areas: "main main main main";
-  height: 100vh;
   margin: 0;
   font-family: Roboto, sans-serif;
 
   main {
     display: grid;
-    grid-area: main;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
 
+    > header,
+    > footer,
     > section {
       display: grid;
-      grid-template-areas:
-        "header"
-        "main"
-        "footer";
-      grid-template-rows: auto 1fr auto;
       grid-gap: 0 $spacer;
+    }
+  }
 
-      .container {
-        display: grid;
-        grid-row-gap: 1.2 * $spacer;
-        padding-right: 1.5 * $spacer;
-        padding-left: 1.5 * $spacer;
-        margin-right: auto;
-        margin-left: auto;
+  .container {
+    display: grid;
+    grid-area: main;
+    grid-template-areas:
+      ". . ."
+      ". row ."
+      ". . .";
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+    grid-gap: 1.2 * $spacer;
 
-        @include media-breakpoint-up(xl) {
-          grid-template-columns: repeat(auto-fit, minmax(map-get($grid-breakpoints, lg), map-get($grid-breakpoints, xl)));
-        }
+    &.bg-gray-6 {
+      color: $white;
+      background-color: map-get($grays, 6);
+    }
 
-        @include media-breakpoint-only(lg) {
-          grid-template-columns: repeat(auto-fit, minmax(map-get($grid-breakpoints, md), map-get($grid-breakpoints, lg)));
-        }
+    &.bg-gray-27 {
+      background-color: map-get($grays, 27);
+    }
 
-        @include media-breakpoint-only(md) {
-          grid-template-columns: repeat(auto-fit, minmax(map-get($grid-breakpoints, sm), map-get($grid-breakpoints, md)));
-        }
+    &.row-gap-2 {
+      grid-row-gap: 2.4 * $spacer;
+    }
 
-        @include media-breakpoint-down(sm) {
-          grid-template-columns: repeat(auto-fit, minmax(map-get($grid-breakpoints, xs), map-get($grid-breakpoints, sm)));
-        }
+    &.row-gap-3 {
+      grid-row-gap: 3.6 * $spacer;
+    }
 
-        &.gap-2 {
-          grid-row-gap: 2 * $spacer;
-        }
-
-        &.gap-3 {
-          grid-row-gap: 3 * $spacer;
-        }
-
-        &::before,
-        &::after {
-          content: "";
-        }
-      }
+    > div {
+      display: grid;
+      grid-area: row;
+      grid-gap: 1.2 * $spacer;
     }
   }
 }

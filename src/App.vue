@@ -1,10 +1,10 @@
 <template>
   <main id="app">
+    <Header v-if="!navigation" :admin="admin" />
     <section>
-      <Header v-if="!navigation" :admin="admin" />
       <router-view />
-      <Footer v-if="!navigation" :admin="admin" />
     </section>
+    <Footer v-if="!navigation" :admin="admin" />
     <Modal v-if="modal.active" :message="modal.message" @close="close" />
     <Loading v-if="loading" />
   </main>
