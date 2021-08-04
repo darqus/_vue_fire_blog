@@ -52,7 +52,7 @@
             Never miss a post. Register for your free account today.
           </h2>
           <router-link class="button" :to="{ name: 'Register' }">
-            Register for {{ appName }} <Icon fill="#fff" type="arrowRight" />
+            Register for {{ appName }} <Icon light type="arrowRight" />
           </router-link>
         </div>
       </div>

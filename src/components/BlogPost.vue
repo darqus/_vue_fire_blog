@@ -5,7 +5,7 @@
       <div class="welcome" v-text="content" />
       <router-link class="link content-link link-light" :to="{ name: 'Register' }">
         Login/Register
-        <Icon fill="#fff" type="arrowRight" />
+        <Icon light type="arrowRight" />
       </router-link>
     </template>
     <template v-else>

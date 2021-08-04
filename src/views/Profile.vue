@@ -9,7 +9,7 @@
         </div>
 
         <div v-if="profile.admin" class="admin-badge">
-          <Icon fill="#fff" type="admin" class="admin-icon" />
+          <Icon light type="admin" class="admin-icon" />
           <span>admin</span>
         </div>
 

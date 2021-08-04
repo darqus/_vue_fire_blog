@@ -47,7 +47,7 @@
         <div v-if="admin" class="nav-profile-options">
           <div class="option">
             <router-link class="option" active-class="active" :to="{ name: profileRoutes[3].name }">
-              <Icon fill="#fff" type="user" />
+              <Icon light type="user" />
               <div>Profile</div>
             </router-link>
           </div>
@@ -58,7 +58,7 @@
             </router-link>
           </div> -->
           <div class="option" @click="$store.dispatch('userLogout')">
-            <Icon fill="#fff" type="logout" />
+            <Icon light type="logout" />
             <div>Sign Out</div>
           </div>
         </div>
