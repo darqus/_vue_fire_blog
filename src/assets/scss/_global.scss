@@ -22,7 +22,9 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  transition: color $duration $transition;
+  transition:
+    color $duration $transition,
+    border-color $duration $transition;
 
   svg {
     transition: transform $duration $transition;
@@ -34,6 +36,12 @@ p {
 
     svg {
       transform: rotateY(180deg);
+    }
+  }
+
+  &.router-link {
+    &-active {
+      border-bottom: 1px solid $black;
     }
   }
 
