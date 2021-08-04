@@ -96,9 +96,7 @@ $ firebase logout
 $ firebase login
 ```
 
-### config firebase
-.env.local
-
+### Local project firebase config
 ```
 VUE_APP_UIDS = []
 
@@ -110,7 +108,9 @@ VUE_APP_MESSAGING_SENDER_ID = ''
 VUE_APP_APP_ID = ''
 ```
 
-VUE_APP_UIDS - array of uids admins
+Fill it from your Firebase project settings and save to .env.local
+
+VUE_APP_UIDS - array of uids blog admins
 
 Project Console: https://console.firebase.google.com/project/fire-blog-vue-js/overview
 
