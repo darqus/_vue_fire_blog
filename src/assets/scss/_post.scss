@@ -56,6 +56,7 @@
         grid-gap: 5px;
 
         @include media-breakpoint-down(sm) {
+          place-content: center;
           grid-template-columns: repeat(6, auto);
           grid-auto-flow: initial;
           grid-gap: 10px;

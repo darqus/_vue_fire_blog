@@ -8,7 +8,6 @@
         :class="{ 'is-active': editor.isActive(paramsClass) }"
         @click="editor.chain().focus()[onClick](paramsClick).run()"
       >
-        <!-- <component :is="icon" class="editor-icon" /> -->
         <Icon light :type="icon" class="editor-icon" />
       </div>
     </div>
