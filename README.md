@@ -1,4 +1,10 @@
-# fireblog
+# FireBlog ✌👍😁🎈
+
+## Description
+### Basic blog for write your posts:
+- blog allows you to work with blogs (create, read, update, delete - CRUD)
+- work with profile: create account, update accounts data, login, logout (use firebase email auth)
+- layouts use only CSS grid, not frameworks, not flexbox
 
 ## Project setup
 ```
@@ -10,23 +16,32 @@ $ npm i --legacy-peer-deps
 ### Compiles and hot-reloads for development
 ```
 $ npm run serve
+$ yarn serve
 ```
 
 ### Compiles and minifies for production
 ```
 $ npm run build
+$ yarn build
 ```
 
 ### Lints and fixes files
 ```
 $ npm run lint
+$ yarn lint
+```
+
+### Deploy you project to Firebase
+```
+$ npm run deploy
+$ yarn deploy
 ```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-### Firebase
+### Initial Firebase
 https://firebase.google.com/docs/hosting/quickstart#initialize
 
 
@@ -55,12 +70,14 @@ click button "Get started"
 $ firebase init hosting
 ```
 
+```
 "Don't set up a default project"
 
 ? What do you want to use as your public directory? dist
 ? Configure as a single-page app (rewrite all urls to /index.html)? Yes
 ? Set up automatic builds and deploys with GitHub? No
 +  Wrote dist/index.html
+```
 
 ```
 $ firebase emulators:start
@@ -96,23 +113,22 @@ VUE_APP_UIDS - array of uids admins
 
 Project Console: https://console.firebase.google.com/project/fire-blog-vue-js/overview
 
-Hosting URL1: https://fire-blog-vue-js.web.app
+## Demo:
+- Firebase Hosting URL1: https://fire-blog-vue-js.web.app
+- Firebase Hosting URL2: https://fire-blog-vue-js.firebaseapp.com
 
-Hosting URL2: https://fire-blog-vue-js.firebaseapp.com/
+### DEV: Yarn update deps:
 
-
-### Yarn update deps:
-
-v1
+v1:
 ```
 $ yarn upgrade-interactive --latest
 ```
 
-v2
+v2:
 ```
 $ yarn upgrade-interactive
 ```
 
 
-### icons
+### Material Design Icons
 https://materialdesignicons.com/
