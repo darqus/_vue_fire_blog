@@ -14,7 +14,7 @@
               class="mobile-menu"
               @click="toggleShowMobileNav"
             >
-              <menuIcon class="menu-icon" />
+              <Icon type="menuOpen" />
             </div>
           </div>
         </nav>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import menuIcon from '@/assets/icons/bars-regular.svg'
+import Icon from '@/components/common/Icon.vue'
 import Logo from '@/components/Logo.vue'
 import Navigation from '@/components/Navigation.vue'
 
@@ -35,7 +35,7 @@ import Navigation from '@/components/Navigation.vue'
 export default {
   name: 'Header',
   components: {
-    menuIcon,
+    Icon,
     Logo,
     Navigation,
   },
