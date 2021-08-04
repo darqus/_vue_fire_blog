@@ -191,7 +191,7 @@ export default new Vuex.Store({
 
       try {
         await firebase.auth().signOut()
-        window.location.reload()
+        window.location.replace('/')
       } catch (error) {
         state.modal.message = error.message
         state.modal.active = true
