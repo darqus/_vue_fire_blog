@@ -4,7 +4,8 @@
 ### Basic blog for write your posts:
 - blog allows you to work with blogs (create, read, update, delete - CRUD)
 - work with profile: create account, update accounts data, login, logout (use firebase email auth)
-- layouts use only CSS grid, not frameworks, not flexbox
+- use tiptap 2x as text editor
+- layouts use only CSS grid, without CUI frameworks, without CSS flexbox
 
 ## Project setup
 ```
