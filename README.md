@@ -56,6 +56,7 @@ or
 ```
 $ npm init
 $ npm install --save firebase
+$ yarn add firebase
 ```
 
 ```
@@ -117,7 +118,12 @@ Project Console: https://console.firebase.google.com/project/fire-blog-vue-js/ov
 - Firebase Hosting URL1: https://fire-blog-vue-js.web.app
 - Firebase Hosting URL2: https://fire-blog-vue-js.firebaseapp.com
 
-### DEV: Yarn update deps:
+
+
+### Material Design Icons
+https://materialdesignicons.com/
+
+### DEV: Yarn interactive update deps:
 
 v1:
 ```
@@ -128,7 +134,3 @@ v2:
 ```
 $ yarn upgrade-interactive
 ```
-
-
-### Material Design Icons
-https://materialdesignicons.com/
