@@ -62,6 +62,8 @@
         }
 
         .editor-button {
+          cursor: pointer;
+
           > .editor-icon {
             width: 34px;
             height: 34px;
@@ -74,19 +76,17 @@
             path {
               fill: $white;
             }
+          }
 
-            &:hover {
-              background-color: map-get($grays, 13);
+          &:hover {
+            > .editor-icon {
+              background-color: map-get($grays, 11);
             }
           }
 
           &.is-active {
             > .editor-icon {
               background-color: map-get($grays, 13);
-
-              &:hover {
-                background-color: $gray-128;
-              }
             }
           }
         }
