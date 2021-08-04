@@ -39,10 +39,7 @@
             @input="checkValidity"
           >
           <div class="icon">
-            <adminIcon v-if="icon === 'adminIcon'" :class="iconClassName" />
-            <email v-if="icon === 'email'" :class="iconClassName" />
-            <user v-if="icon === 'user'" :class="iconClassName" />
-            <password v-if="icon === 'password'" :class="iconClassName" />
+            <Icon :type="icon" :disabled="disabled" :class="iconClassName" />
           </div>
         </div>
       </div>
@@ -59,21 +56,14 @@
 </template>
 
 <script>
-import adminIcon from '@/assets/icons/user-crown-light.svg'
-import user from '@/assets/icons/user-alt-light.svg'
-import email from '@/assets/icons/envelope-regular.svg'
-import password from '@/assets/icons/lock-alt-solid.svg'
-
 import LoadingBtn from '@/components/LoadingBtn.vue'
+import Icon from '@/components/common/Icon.vue'
 
 export default {
   name: 'Form',
   components: {
-    adminIcon,
-    user,
-    email,
-    password,
     LoadingBtn,
+    Icon,
   },
   props: {
     form: {

@@ -42,12 +42,6 @@ p {
   }
 }
 
-.icon-svg {
-  width: $spacer;
-  height: $spacer;
-  pointer-events: none;
-}
-
 .arrow {
   width: 12px;
   margin-left: 8px;
@@ -59,6 +53,19 @@ p {
   &-light {
     path {
       fill: $white;
+    }
+  }
+}
+
+.icon-svg {
+  width: $spacer;
+  height: $spacer;
+  pointer-events: none;
+
+  .disabled,
+  &:disabled {
+    path {
+      fill: map-get($grays, 20);
     }
   }
 }

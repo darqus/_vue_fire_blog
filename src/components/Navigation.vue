@@ -47,7 +47,7 @@
         <div v-if="admin" class="nav-profile-options">
           <div class="option">
             <router-link class="option" active-class="active" :to="{ name: profileRoutes[3].name }">
-              <userIcon class="icon" />
+              <Icon fill="#fff" type="user" />
               <div>Profile</div>
             </router-link>
           </div>
@@ -58,7 +58,7 @@
             </router-link>
           </div> -->
           <div class="option" @click="$store.dispatch('userLogout')">
-            <signOutIcon class="icon" />
+            <Icon fill="#fff" type="logout" />
             <div>Sign Out</div>
           </div>
         </div>
@@ -72,17 +72,12 @@ import { mapState } from 'vuex'
 
 import { MAIN_ROUTE, OVER_ROUTES, PROFILE_ROUTES } from '@/router'
 
-import userIcon from '@/assets/icons/user-alt-light.svg'
-// import adminIcon from '@/assets/icons/user-crown-light.svg'
-import signOutIcon from '@/assets/icons/sign-out-alt-regular.svg'
-
+import Icon from '@/components/common/Icon.vue'
 
 export default {
   name: 'Navigation',
   components: {
-    userIcon,
-    // adminIcon,
-    signOutIcon,
+    Icon,
   },
   props: {
     containMain: Boolean,

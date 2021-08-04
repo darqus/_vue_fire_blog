@@ -9,7 +9,7 @@
         </div>
 
         <div v-if="profile.admin" class="admin-badge">
-          <adminIcon class="admin-icon" />
+          <Icon fill="#fff" type="admin" class="admin-icon" />
           <span>admin</span>
         </div>
 
@@ -27,8 +27,7 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 
-import adminIcon from '@/assets/icons/user-crown-light.svg'
-
+import Icon from '@/components/common/Icon.vue'
 import Form from '@/components/common/Form.vue'
 
 import { createFormData } from '@/components/common/forms/profile'
@@ -37,7 +36,7 @@ import { createFormData } from '@/components/common/forms/profile'
 export default {
   name: 'Profile',
   components: {
-    adminIcon,
+    Icon,
     Form,
   },
   computed: {
