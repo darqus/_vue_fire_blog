@@ -52,7 +52,7 @@
             Never miss a post. Register for your free account today.
           </h2>
           <router-link class="button" :to="{ name: 'Register' }">
-            Register for {{ appName }} <Arrow class="arrow arrow-light" />
+            Register for {{ appName }} <Icon fill="#fff" type="arrowRight" />
           </router-link>
         </div>
       </div>
@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import Arrow from '@/assets/icons/arrow-right-light.svg'
+import Icon from '@/components/common/Icon.vue'
 
 import BlogPost from '@/components/BlogPost.vue'
 import BlogCard from '@/components/BlogCard.vue'
@@ -72,7 +72,7 @@ import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'Home',
   components: {
-    Arrow,
+    Icon,
     BlogPost,
     BlogCard,
   },

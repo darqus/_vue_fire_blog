@@ -4,7 +4,8 @@
     <template v-if="isWelcome">
       <div class="welcome" v-text="content" />
       <router-link class="link content-link link-light" :to="{ name: 'Register' }">
-        Login/Register <Arrow class="arrow arrow-light" />
+        Login/Register
+        <Icon fill="#fff" type="arrowRight" />
       </router-link>
     </template>
     <template v-else>
@@ -13,7 +14,8 @@
       </div>
       <div class="content-preview" v-html="content" />
       <router-link class="link content-link" :to="{ name: 'PostView', params: { id } }">
-        View Post <Arrow class="arrow" />
+        View Post
+        <Icon type="arrowRight" />
       </router-link>
     </template>
     <!-- <div class="image">
@@ -25,13 +27,13 @@
 <script>
 import { formatDate } from '@/utils/formatters'
 
-import Arrow from '@/assets/icons/arrow-right-light.svg'
+import Icon from '@/components/common/Icon.vue'
 
 
 export default {
   name: 'BlogPost',
   components: {
-    Arrow,
+    Icon,
   },
   props: {
     id: [String, Number],
