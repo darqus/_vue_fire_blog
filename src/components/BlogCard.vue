@@ -2,10 +2,10 @@
   <router-link class="blog-card" :to="{ name: 'PostView', params: { id } }">
     <div v-show="$store.state.isEditPost" class="blog-card-icons">
       <div class="blog-card-icon" @click.prevent="$router.push({ name: 'PostEdit', params: { id }})">
-        <Edit class="edit" />
+        <Icon type="applicationEditOutline" />
       </div>
       <div class="blog-card-icon" @click.prevent="$store.dispatch('blogDeletePost', id)">
-        <Delete class="delete" />
+        <Icon type="deleteOutline" />
       </div>
     </div>
     <!-- <img class="blog-card-image" :src="`/img/cards/${image}.jpg`" :alt="title"> -->
@@ -19,15 +19,13 @@
 <script>
 import { formatDate } from '@/utils/formatters'
 
-import Edit from '@/assets/icons/edit-regular.svg'
-import Delete from '@/assets/icons/trash-regular.svg'
+import Icon from '@/components/common/Icon.vue'
 
 
 export default {
   name: 'BlogCard',
   components: {
-    Edit,
-    Delete,
+    Icon,
   },
   props: {
     id: [String, Number],

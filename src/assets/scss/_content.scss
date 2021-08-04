@@ -154,13 +154,6 @@
             background-color: map-get($grays, 13);
             box-shadow: $box-shadow-white;
           }
-
-          .edit,
-          .delete {
-            width: auto;
-            height: 15px;
-            pointer-events: none;
-          }
         }
       }
 

@@ -45,6 +45,7 @@ p {
 .icon-svg {
   width: $spacer;
   height: $spacer;
+  pointer-events: none;
 }
 
 .arrow {
