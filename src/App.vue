@@ -1,12 +1,12 @@
 <template>
   <main id="app">
     <Header v-if="!navigation" :admin="admin" />
-    <section>
+    <section :class="{ blur: loading }">
       <router-view />
+      <Loading v-if="loading" />
     </section>
     <Footer v-if="!navigation" :admin="admin" />
     <Modal v-if="modal.active" :message="modal.message" @close="close" />
-    <Loading v-if="loading" />
   </main>
 </template>
 
