@@ -34,12 +34,9 @@
           </h3>
           <div class="blog-cards">
             <BlogCard
-              v-for="{ id, title, image, date } in blogPostsCards"
-              :id="id"
-              :key="id"
-              :title="title"
-              :image="image"
-              :date="date"
+              v-for="blog in blogPostsCards"
+              :key="blog.id"
+              :blog="blog"
             />
           </div>
         </div>

@@ -1,20 +1,21 @@
 <template>
-  <router-link class="blog-card" :to="{ name: 'PostView', params: { id } }">
+  <router-link class="blog-card" :to="{ name: 'PostView', params: { id: blog.id } }">
     <div v-show="$store.state.isEditPost" class="blog-card-icons">
-      <div class="blog-card-icon" @click.prevent="$router.push({ name: 'PostEdit', params: { id }})">
+      <div class="blog-card-icon" @click.prevent="$router.push({ name: 'PostEdit', params: { id: blog.id }})">
         <Icon type="applicationEditOutline" />
       </div>
-      <div class="blog-card-icon" @click.prevent="$store.dispatch('blogDeletePost', id)">
+      <div class="blog-card-icon" @click.prevent="$store.dispatch('blogDeletePost', blog.id)">
         <Icon type="deleteOutline" />
       </div>
     </div>
     <!-- <img class="blog-card-image" :src="`/img/cards/${image}.jpg`" :alt="title"> -->
     <div class="blog-card-info">
-      <h4 class="blog-card-title" v-text="title" />
+      <h4 class="blog-card-title" v-text="blog.title" />
       <h6 class="blog-card-date date">
         Posted on:
-        <strong v-text="getFormatDateTime(date)" />
+        <strong v-text="getFormatDateTime(blog.date)" />
       </h6>
+      <div class="short-content" v-html="blog.content" />
     </div>
   </router-link>
 </template>
@@ -31,10 +32,15 @@ export default {
     Icon,
   },
   props: {
-    id: [String, Number],
-    title: String,
-    image: String,
-    date: [String, Number],
+    blog: {
+      type: Object,
+      validate: (prop) => (
+        prop
+        && 'title' in prop
+        && 'date' in prop
+        && 'content' in prop
+      ),
+    },
   },
   data: () => ({
     getFormatDateTime,

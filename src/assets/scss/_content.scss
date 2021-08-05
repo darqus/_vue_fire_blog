@@ -201,6 +201,11 @@
           font-weight: 400;
         }
 
+        .short-content {
+          max-height: 40px;
+          overflow: hidden;
+        }
+
         .link {
           align-items: center;
           font-size: 12px;

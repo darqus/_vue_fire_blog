@@ -11,12 +11,9 @@
     <div class="container">
       <div class="blog-cards">
         <BlogCard
-          v-for="{ id, title, image, date } in blogPosts"
-          :id="id"
-          :key="id"
-          :title="title"
-          :image="image"
-          :date="date"
+          v-for="blog in blogPosts"
+          :key="blog.id"
+          :blog="blog"
         />
       </div>
     </div>
