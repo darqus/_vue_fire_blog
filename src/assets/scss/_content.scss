@@ -167,10 +167,27 @@
       }
 
       .blog-card-info {
+        position: relative;
         display: grid;
         grid-gap: 1.2 * $spacer;
         padding: 1.5 * $spacer $spacer;
         color: $black;
+
+        &::before {
+          position: absolute;
+          top: -10px;
+          right: 11px;
+          width: 0;
+          height: 100%;
+          content: "";
+          border-color:
+            transparent
+            map-get($grays, 14)
+            transparent
+            transparent;
+          border-style: solid;
+          border-width: 0 10px 10px 10px;
+        }
 
         .blog-card-title {
           font-size: 20px;

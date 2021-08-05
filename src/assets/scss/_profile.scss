@@ -158,7 +158,7 @@ $form-width-max: 350px;
         text-align: center;
         text-transform: capitalize;
         user-select: none;
-        background-color: $gray-104;
+        background-color: map-get($grays, 13);
         border-radius: $border-radius;
         place-self: center;
 
@@ -188,7 +188,7 @@ form {
         display: grid;
         justify-self: start;
         font-size: 14px;
-        color: $gray-104;
+        color: map-get($grays, 13);
 
         &.error {
           font-size: 12px;

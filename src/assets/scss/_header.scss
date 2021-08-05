@@ -62,7 +62,7 @@
       height: 40px;
       color: $white;
       cursor: pointer;
-      background-color: $gray-48;
+      background-color: map-get($grays, 6);
       border-radius: 50%;
       place-content: center;
 
@@ -89,7 +89,9 @@
           height: 0;
           content: "";
           border-color:
-            transparent  transparent map-get($grays, 9)
+            transparent
+            transparent
+            map-get($grays, 9)
             transparent;
           border-style: solid;
           border-width: 0 10px 10px 10px;
@@ -103,7 +105,11 @@
           height: 0;
           margin-left: -10px;
           content: "";
-          border-color: $gray-48 transparent transparent transparent;
+          border-color:
+            map-get($grays, 6)
+            transparent
+            transparent
+            transparent;
           border-style: solid;
           border-width: 18px 1px 0 190px;
         }
@@ -121,7 +127,7 @@
             place-items: center;
             width: 40px;
             height: 40px;
-            color: $gray-48;
+            color: map-get($grays, 6);
             user-select: none;
             background-color: $white;
             border-radius: 50%;
