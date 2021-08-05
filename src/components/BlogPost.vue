@@ -9,11 +9,9 @@
       </router-link>
     </template>
     <template v-else>
-      <div>
-        <small class="date" v-text="getFormatDateTime(date)" />
-      </div>
       <div class="content-preview" v-html="content" />
       <div class="content-row-link">
+        <small class="date" v-text="getFormatDateTime(date)" />
         <router-link class="link content-link" :to="{ name: 'PostView', params: { id } }">
           View Post
           <Icon type="arrowRight" />
