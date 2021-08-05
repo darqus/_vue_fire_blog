@@ -11,7 +11,10 @@
     <!-- <img class="blog-card-image" :src="`/img/cards/${image}.jpg`" :alt="title"> -->
     <div class="blog-card-info">
       <h4 class="blog-card-title" v-text="title" />
-      <h6 class="blog-card-date date" v-text="'Posted on: ' + getFormatDateTime(date)" />
+      <h6 class="blog-card-date date">
+        Posted on:
+        <strong v-text="getFormatDateTime(date)" />
+      </h6>
     </div>
   </router-link>
 </template>

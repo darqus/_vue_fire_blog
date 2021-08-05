@@ -4,7 +4,10 @@
       <div class="row">
         <h2 class="post-view-title" v-text="blog.title" />
         <div class="post-view-date">
-          <small class="date" v-text="`Posted on: ${getFormatDateTime(blog.date)}`" />
+          <small class="date">
+            Posted on:
+            <strong v-text="getFormatDateTime(blog.date)" />
+          </small>
         </div>
         <!-- <img :src="blog.coverPhoto" alt="blog.title"> -->
         <div class="post-view-content" v-html="blog.content" />
