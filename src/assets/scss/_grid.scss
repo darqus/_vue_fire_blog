@@ -19,8 +19,12 @@ body {
       ". . ."
       ". row ."
       ". . .";
-    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
-    grid-gap: 1.2 * $spacer;
+    grid-template-columns:
+      1fr minmax(0, 1200px)
+      1fr;
+    grid-gap:
+      1.2 * $spacer
+      1.2 * $spacer;
 
     &.bg-gray-dark {
       color: $white;
@@ -42,7 +46,9 @@ body {
     > div {
       display: grid;
       grid-area: row;
-      grid-gap: 1.2 * $spacer;
+      grid-gap:
+        1.1 * $spacer
+        1.5 * $spacer;
     }
   }
 }
