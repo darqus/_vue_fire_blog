@@ -11,13 +11,13 @@
     <!-- <img class="blog-card-image" :src="`/img/cards/${image}.jpg`" :alt="title"> -->
     <div class="blog-card-info">
       <h4 class="blog-card-title" v-text="title" />
-      <h6 class="blog-card-date date" v-text="'Posted on: ' + formatDate(date)" />
+      <h6 class="blog-card-date date" v-text="'Posted on: ' + getFormatDateTime(date)" />
     </div>
   </router-link>
 </template>
 
 <script>
-import { formatDate } from '@/utils/formatters'
+import { getFormatDateTime } from '@/utils/formatters'
 
 import Icon from '@/components/common/Icon.vue'
 
@@ -34,7 +34,7 @@ export default {
     date: [String, Number],
   },
   data: () => ({
-    formatDate,
+    getFormatDateTime,
   }),
 }
 </script>

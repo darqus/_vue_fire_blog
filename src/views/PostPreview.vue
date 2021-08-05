@@ -5,7 +5,7 @@
         <h2 class="post-view-title" v-text="$store.state.blog.title" />
         <!-- <img :src="blogCoverPhoto" alt="" /> -->
         <div class="post-view-date">
-          <small class="date" v-text="formatDate(new Date())" />
+          <small class="date" v-text="getFormatDateTime(new Date())" />
         </div>
         <div class="post-view-content" v-html="$store.state.blog.content" />
         <div class="post-view-actions">
@@ -24,12 +24,12 @@
 </template>
 
 <script>
-import { formatDate } from '@/utils/formatters'
+import { getFormatDateTime } from '@/utils/formatters'
 
 export default {
   name: 'PostPreview',
   data: () => ({
-    formatDate,
+    getFormatDateTime,
   }),
 }
 </script>

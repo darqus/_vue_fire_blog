@@ -1,17 +1,33 @@
+// https:// developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
+
 const ZONE = 'en' // 'ru'
 
-const OPTIONS = {
+/* const OPTIONS = {
   year: 'numeric',
-  month: 'long',
+  month: '2-digit',
   day: '2-digit',
   hour: '2-digit',
   minute: '2-digit',
   second: '2-digit',
+  hour12: false,
+} */
+
+const OPTIONS = {
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hour12: false,
 }
 
-// const OPTIONS = { dateStyle: 'long' }
+// const OPTIONS = { dateStyle: 'long', timeStyle: 'long' }
 
-const formatDate = (ts) => new Date(ts)
-  .toLocaleString(ZONE, OPTIONS)
+// const OPTIONS = { dateStyle: 'short', timeStyle: 'long', hour12: false }
 
-export { formatDate }
+const getFormatDateTime = (ts) => {
+  const date = new Date(ts)
+  const formattedDate = new Intl.DateTimeFormat(OPTIONS).format(date)
+  const formattedTime = date.toLocaleString(ZONE, OPTIONS)
+  return [formattedDate, formattedTime].join(', ')
+}
+
+export { getFormatDateTime }
