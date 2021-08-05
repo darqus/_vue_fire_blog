@@ -177,15 +177,10 @@
   color: $white;
   background-color: map-get($grays, 6);
 
-  .container {
+  .post-view-actions {
     display: grid;
-    grid-gap: 2.5 * $spacer;
-
-    .post-view-actions {
-      display: grid;
-      grid-auto-flow: column;
-      grid-gap: $spacer;
-      place-content: center end;
-    }
+    grid-auto-flow: column;
+    grid-gap: $spacer;
+    place-content: center end;
   }
 }
