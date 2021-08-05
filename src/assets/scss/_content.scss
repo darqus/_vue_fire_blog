@@ -13,7 +13,6 @@
         .content-header {
           font-size: 40px;
           font-weight: 300;
-          text-transform: uppercase;
 
           @include media-breakpoint-down(sm) {
             font-size: 32px;
@@ -107,13 +106,12 @@
   .blog-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    place-content: center;
     grid-gap: 2 * $spacer;
 
     .blog-card {
       position: relative;
       display: grid;
-      grid-template-columns: 1fr;
+      padding: 1.5 * $spacer 2 * $spacer 1.5 * $spacer $spacer;
       text-decoration: none;
       cursor: pointer;
       background-color: rgba($white, 0.9);
@@ -121,7 +119,23 @@
       box-shadow: 0 8px 25px 0 rgba($white, 0.15);
       transition: transform $duration $transition;
       backdrop-filter: blur(5.5px);
-      place-content: center;
+      place-content: start;
+
+      &::before {
+        position: absolute;
+        top: -10px;
+        right: 11px;
+        width: 0;
+        height: 100%;
+        content: "";
+        border-color:
+          transparent
+          map-get($grays, 14)
+          transparent
+          transparent;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+      }
 
       &:hover {
         box-shadow: $box-shadow;
@@ -172,28 +186,14 @@
         position: relative;
         display: grid;
         grid-gap: 1.2 * $spacer;
-        padding: 1.5 * $spacer $spacer;
         color: $black;
 
-        &::before {
-          position: absolute;
-          top: -10px;
-          right: 11px;
-          width: 0;
-          height: 100%;
-          content: "";
-          border-color:
-            transparent
-            map-get($grays, 14)
-            transparent
-            transparent;
-          border-style: solid;
-          border-width: 0 10px 10px 10px;
-        }
-
         .blog-card-title {
+          overflow: hidden;
           font-size: 20px;
           font-weight: 300;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
 
         .blog-card-date {
@@ -201,9 +201,11 @@
           font-weight: 400;
         }
 
-        .short-content {
-          max-height: 40px;
+        .short-content,
+        .short-content * {
           overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
 
         .link {
