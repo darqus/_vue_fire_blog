@@ -116,9 +116,11 @@
       grid-template-columns: 1fr;
       text-decoration: none;
       cursor: pointer;
-      background-color: $white;
+      background-color: rgba($white, 0.9);
       border-radius: $border-radius;
+      box-shadow: 0 8px 25px 0 rgba($white, 0.15);
       transition: transform $duration $transition;
+      backdrop-filter: blur(5.5px);
       place-content: center;
 
       &:hover {
