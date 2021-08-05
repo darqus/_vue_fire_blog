@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <div class="form">
+    <div class="container form">
       <div class="row">
         <h2>Account Settings</h2>
 
