@@ -107,20 +107,20 @@ $colors: map-merge(
     "teal": $teal,
     "cyan": $cyan,
     "white": $white,
-    "gray": $gray-104,
-    "gray-dark": $gray-48
+    "gray": map-get($grays, 13),
+    "gray-dark": map-get($grays, 6)
   ),
   $colors
 );
 
 $primary: $blue !default;
-$secondary: $gray-104 !default;
+$secondary: map-get($grays, 13) !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: $gray-248 !default;
-$dark: $gray-48 !default;
+$light: map-get($grays, 31) !default;
+$dark: map-get($grays, 6) !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default

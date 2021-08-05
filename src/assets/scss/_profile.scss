@@ -203,7 +203,7 @@ form {
           padding: 10px 10px 10px 45px;
           font-size: $spacer;
           background-color: map-get($grays, 31);
-          border: 1px solid $gray-232;
+          border: 1px solid map-get($grays, 29);
           border-radius: 7px;
           transition: border-color $duration $transition;
 
