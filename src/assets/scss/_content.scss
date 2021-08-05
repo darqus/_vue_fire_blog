@@ -20,19 +20,28 @@
         }
 
         .content-preview {
+          display: grid;
           font-size: $spacer;
           font-weight: 300;
           line-height: 1.7;
         }
 
-        /* .content-link {
-          border-bottom: 1px solid transparent;
-          transition: border-bottom-color $duration $transition;
+        .content-row-link {
+          display: grid;
+          grid-auto-flow: column;
+          grid-gap: $spacer;
+          font-size: $spacer;
+          font-weight: 300;
+          line-height: 1.7;
+          place-content: center end;
+        }
 
-          &:hover {
-            border-bottom-color: map-get($grays, 6);
-          }
-        } */
+        .content-link {
+          display: grid;
+          grid-auto-flow: column;
+          grid-gap: 0.5 * $spacer;
+          align-items: center;
+        }
 
         .link-light {
           &:hover {
