@@ -22,13 +22,13 @@ body {
     grid-template-columns: 1fr minmax(0, 1200px) 1fr;
     grid-gap: 1.2 * $spacer;
 
-    &.bg-gray-6 {
+    &.bg-gray-dark {
       color: $white;
       background-color: map-get($grays, 6);
     }
 
-    &.bg-gray-27 {
-      background-color: map-get($grays, 27);
+    &.bg-gray-light {
+      background-color: map-get($grays, 31);
     }
 
     &.row-gap-2 {

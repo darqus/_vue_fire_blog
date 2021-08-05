@@ -2,7 +2,7 @@
   <div class="home">
     <div class="blog-wrapper">
       <div v-if="!user" class="blog-content">
-        <div class="container row-gap-3" :class="{ 'bg-gray-6': !user }">
+        <div class="container row-gap-3" :class="{ 'bg-gray-dark': !user }">
           <BlogPost
             :id="welcomePost.id"
             :is-welcome="welcomePost.isWelcome"
@@ -27,7 +27,7 @@
       </template>
     </div>
     <div v-if="blogPostsCards.length" class="blog-card-wrapper">
-      <div class="container row-gap-3 bg-gray-6">
+      <div class="container row-gap-3 bg-gray-dark">
         <div class="row">
           <h3 class="blog-card-header">
             View More Recent Blogs
@@ -46,7 +46,7 @@
       </div>
     </div>
     <div v-if="!user" class="updates">
-      <div class="container row-gap-3 bg-gray-27">
+      <div class="container row-gap-3 bg-gray-light">
         <div class="row">
           <h2 class="updates-header">
             Never miss a post. Register for your free account today.
