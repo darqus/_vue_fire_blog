@@ -52,12 +52,11 @@
 
       .mobile-menu {
         cursor: pointer;
-      }
 
-      .menu-icon {
-        width: auto;
-        height: 25px;
-        pointer-events: none;
+        .icon-svg {
+          width: 2rem;
+          height: 2rem;
+        }
       }
     }
 
