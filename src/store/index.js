@@ -23,7 +23,7 @@ export default new Vuex.Store({
     blogPosts: [],
     blog: {
       title: '',
-      content: 'write your blog here...',
+      content: '',
       date: '',
     },
     isEditPost: null,
@@ -59,6 +59,20 @@ export default new Vuex.Store({
     setCurrentBlog(state, payload) {
       state.blog = payload
     },
+    updateBlogTitle(state, payload) {
+      state.blog.title = payload
+      state.isEditedPost = true
+    },
+    updateBlogContent(state, payload) {
+      state.blog.content = payload
+      state.isEditedPost = true
+    },
+    clearPost(state) {
+      state.blog.title = ''
+      state.blog.content = ''
+      state.blog.date = ''
+      state.isEditedPost = false
+    },
     filterBlogPosts(state, payload) {
       state.blogPosts = state.blogPosts.filter(({ id }) => id !== payload)
     },
@@ -85,20 +99,6 @@ export default new Vuex.Store({
       if (!checkTypes) return
       const initials = `${profile.firstName[0]}${profile.lastName[0]}`
       state.profile.initials = initials
-    },
-    updateBlogTitle(state, payload) {
-      state.blog.title = payload
-      state.isEditedPost = true
-    },
-    updateBlogContent(state, payload) {
-      state.blog.content = payload
-      state.isEditedPost = true
-    },
-    clearPost(state) {
-      state.blog.title = ''
-      state.blog.content = 'write your blog here...'
-      state.blog.date = ''
-      state.isEditedPost = false
     },
     clearModal(state) {
       state.modal.message = ''

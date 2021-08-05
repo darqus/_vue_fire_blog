@@ -32,6 +32,7 @@ export default {
     }),
   },
   async created() {
+    this.$store.commit('clearPost')
     await this.$store.dispatch('blogGetPost', { id: this.$route.params.id })
   },
 }
