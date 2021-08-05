@@ -4,80 +4,55 @@
 
   .row {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-gap: 1.5 * $spacer;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 2.5 * $spacer;
     place-items: center initial;
 
     @include media-breakpoint-down(sm) {
       grid-template-columns: initial;
+      place-items: center;
     }
 
-    .left {
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-gap: 1.5 * $spacer;
-      place-items: initial;
+    .logo {
+      font-size: 1.1 * $spacer;
+      font-weight: 600;
+      color: $white;
+      text-decoration: none;
+      transition: color $duration $transition;
 
-      @include media-breakpoint-down(sm) {
-        grid-template-columns: initial;
-        place-items: center;
+      &:hover {
+        color: rgba($white, 0.9);
       }
+    }
 
-      .logo {
-        font-size: 1.1 * $spacer;
-        font-weight: 600;
+    .nav {
+      display: grid;
+      place-content: center start;
+      grid-auto-flow: column;
+      grid-gap: 1.5 * $spacer;
+
+      .link {
+        font-size: 0.7 * $spacer;
+        font-weight: 500;
         color: $white;
-        text-decoration: none;
-        transition: color $duration $transition;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+
+        &.router-link {
+          &-active {
+            border-bottom: 1px solid $white;
+          }
+        }
 
         &:hover {
           color: rgba($white, 0.9);
+          border-bottom: 1px solid  rgba($white, 0.9);
         }
-      }
-
-      .nav {
-        display: grid;
-        grid-auto-flow: column;
-        grid-gap: 1.5 * $spacer;
-
-        .link {
-          font-size: 0.7 * $spacer;
-          font-weight: 500;
-          color: $white;
-          border-top: 1px solid transparent;
-          border-bottom: 1px solid transparent;
-
-          &.router-link {
-            &-active {
-              border-bottom: 1px solid $white;
-            }
-          }
-
-          &:hover {
-            color: rgba($white, 0.9);
-            border-bottom: 1px solid  rgba($white, 0.9);
-          }
-        }
-      }
-
-      .col-2 {
-        place-self: center;
       }
     }
 
-    .right {
-      display: grid;
-      place-items: end;
-      align-self: center;
-      color: $white;
-
-      @include media-breakpoint-down(sm) {
-        place-items: center;
-      }
-
-      small {
-        font-size: 0.7rem;
-      }
+    small {
+      font-size: 0.7rem;
     }
   }
 }

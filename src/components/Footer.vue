@@ -2,17 +2,9 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="left">
-          <div class="col-1">
-            <Logo class="logo" />
-          </div>
-          <div class="col-2">
-            <Navigation is-footer />
-          </div>
-        </div>
-        <div class="right">
-          <small v-text="copy" />
-        </div>
+        <Logo class="logo" />
+        <Navigation :admin="admin" is-footer />
+        <small v-text="copy" />
       </div>
     </div>
   </footer>
