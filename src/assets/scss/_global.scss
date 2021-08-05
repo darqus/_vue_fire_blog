@@ -7,7 +7,7 @@
 
 .link {
   font-size: 0.9 * $spacer;
-  color: $black;
+  color: $primary;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -21,7 +21,7 @@
 
   &:hover {
     margin-right: 0;
-    color: rgba($black, 0.8);
+    color: rgba($primary, 0.8);
 
     svg {
       transform: rotateY(180deg);
@@ -37,16 +37,6 @@
   width: $spacer;
   height: $spacer;
   pointer-events: none;
-
-  /* path {
-    fill: $black;
-  }
-
-  &-light {
-    path {
-      fill: $white;
-    }
-  } */
 
   .disabled,
   &:disabled {

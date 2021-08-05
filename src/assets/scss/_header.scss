@@ -40,12 +40,12 @@
 
           &.router-link {
             &-active {
-              border-bottom: 1px solid $black;
+              border-bottom: 1px solid $primary;
             }
           }
 
           &:hover {
-            color: rgba($black, 0.7);
+            color: rgba($primary, 0.7);
           }
         }
       }
