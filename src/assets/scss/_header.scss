@@ -32,11 +32,18 @@
 
         .link {
           display: grid;
-          place-self: center;
           font-weight: 500;
+          border-top: 1px solid transparent;
+          border-bottom: 1px solid transparent;
           transition: color $duration $transition;
+          place-self: center;
 
-          &.active,
+          &.router-link {
+            &-active {
+              border-bottom: 1px solid $black;
+            }
+          }
+
           &:hover {
             color: rgba($black, 0.7);
           }
@@ -222,9 +229,11 @@
         color: rgba($white, 0.7);
       }
 
-      &.router-link-active {
-        padding-left: 10px;
-        border-left: 2px solid $white;
+      &.router-link {
+        &-active {
+          padding-left: 10px;
+          border-left: 2px solid $white;
+        }
       }
     }
   }
