@@ -44,14 +44,14 @@
             </div>
           </div>
         </div>
-        <div v-if="admin" class="nav-profile-options">
+        <div class="nav-profile-options">
           <div class="option">
             <router-link class="option" active-class="active" :to="{ name: profileRoutes[3].name }">
               <Icon light type="user" />
               <div>Profile</div>
             </router-link>
           </div>
-          <!-- <div class="option">
+          <!-- <div v-if="admin"  class="option">
             <router-link class="option" active-class="active" :to="{ name: profileRoutes[4].name }">
               <adminIcon class="icon" />
               <div>Add Admin</div>
