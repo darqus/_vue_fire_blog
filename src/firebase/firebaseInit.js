@@ -1,5 +1,5 @@
-import firebase from 'firebase/app'
-import 'firebase/firestore'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
 
 const firebaseApp = firebase.initializeApp({
   apiKey: process.env.VUE_APP_API_KEY,

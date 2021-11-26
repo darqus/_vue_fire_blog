@@ -11,8 +11,8 @@ import PostCreate from '@/views/PostCreate.vue'
 import PostPreview from '@/views/PostPreview.vue'
 import PostView from '@/views/PostView.vue'
 import PostEdit from '@/views/PostEdit.vue'
-import firebase from 'firebase/app'
-import 'firebase/auth'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/auth'
 
 Vue.use(VueRouter)
 

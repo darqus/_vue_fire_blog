@@ -97,6 +97,9 @@ $ firebase logout
 $ firebase login
 ```
 
+https://firebase.google.com/docs/web/modular-upgrade
+https://firebase.google.com/docs/web/modular-upgrade#update_imports_to_v9_compat
+
 ### Local project firebase config
 ```
 VUE_APP_UIDS = []

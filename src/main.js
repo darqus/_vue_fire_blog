@@ -3,8 +3,8 @@ import '@/assets/scss/index.scss'
 import Vue from 'vue'
 import App from '@/App.vue'
 import router from '@/router'
-import firebase from 'firebase/app'
-import 'firebase/auth'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/auth'
 import store from '@/store'
 
 Vue.config.productionTip = false
