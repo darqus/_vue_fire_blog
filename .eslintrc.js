@@ -13,10 +13,8 @@ module.exports = {
   parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 2020,
-    parser: '@typescript-eslint/parser',
-    tsconfigRootDir: __dirname,
     project: [
-      'tsconfig.json',
+      'jsconfig.json',
     ],
     sourceType: 'module',
     extraFileExtensions: [
@@ -31,7 +29,6 @@ module.exports = {
   ],
   plugins: [
     'class-property',
-    '@typescript-eslint',
   ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 1,
