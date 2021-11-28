@@ -8,6 +8,9 @@
         </div>
       </div>
     </template>
+    <div v-if="!admin">
+      <br>
+    </div>
     <div class="container">
       <div class="blog-cards">
         <BlogCard
