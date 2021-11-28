@@ -99,7 +99,7 @@
         z-index: 99;
         width: 250px;
         cursor: initial;
-        background-color: map-get($grays, 9);
+        background-color: map-get($grays, 5);
         box-shadow: $box-shadow;
 
         &::before {
@@ -112,7 +112,7 @@
           border-color:
             transparent
             transparent
-            map-get($grays, 9)
+            map-get($grays, 5)
             transparent;
           border-style: solid;
           border-width: 0 10px 10px 10px;
@@ -127,7 +127,7 @@
           margin-left: -10px;
           content: "";
           border-color:
-            map-get($grays, 6)
+            map-get($grays, 10)
             transparent
             transparent
             transparent;
@@ -176,7 +176,7 @@
           grid-gap: $spacer;
           place-items: center start;
           padding: $spacer;
-          background-color: map-get($grays, 11);
+          background-color: map-get($grays, 6);
 
           .option {
             display: grid;

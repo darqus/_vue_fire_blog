@@ -82,7 +82,7 @@
   .blog-card-header {
     font-size: 28px;
     font-weight: 300;
-    color: $white;
+    color: map-get($grays, 25);
   }
 
   .toggle-edit {
@@ -90,7 +90,7 @@
     grid-auto-flow: column;
     grid-gap: $spacer;
     place-items: center;
-    color: $white;
+    color: map-get($grays, 25);
     place-content: center end;
 
     .blog-checkbox {
@@ -113,7 +113,7 @@
         height: 30px;
         content: "";
         background-color: map-get($grays, 6);
-        border: $white solid 2px;
+        border: map-get($grays, 25) solid 2px;
         border-radius: 20px;
         box-shadow: $box-shadow;
         transition: left $duration $transition;
@@ -153,7 +153,7 @@
         content: "";
         border-color:
           transparent
-          map-get($grays, 14)
+          map-get($grays, 10)
           transparent
           transparent;
         border-style: solid;
@@ -186,7 +186,7 @@
           place-content: center;
 
           path {
-            fill: $white;
+            fill: map-get($grays, 25);
           }
 
           &:hover {

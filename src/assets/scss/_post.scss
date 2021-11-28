@@ -1,7 +1,7 @@
 .create-post,
 .edit-post {
   overflow: hidden;
-  color: $white;
+  color: map-get($grays, 25);
   background-color: map-get($grays, 5);
 
   .container {
@@ -9,6 +9,8 @@
       input {
         padding: 10px 20px;
         font-size: $spacer;
+        color: map-get($grays, 25);
+        background-color: map-get($grays, 4);
         border: none;
         // border-bottom: 1px solid map-get($grays, 6);
         border-radius: $border-radius;
@@ -96,7 +98,7 @@
       /* Basic editor styles */
       .ProseMirror {
         padding: 10px 20px;
-        border: 1px solid map-get($grays, 25);
+        border: 1px solid map-get($grays, 10);
         border-radius: $border-radius;
 
         ul,
