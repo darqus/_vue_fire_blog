@@ -78,6 +78,16 @@ input {
     border: 2px solid map-get($grays, 25);
   }
 
+  &.success {
+    color: map-get($grays, 31);
+    background-color: rgba($green, $hover);
+    border: 2px solid rgba($green, $hover);
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+
   &:hover {
     background-color: map-get($grays, 20);
   }

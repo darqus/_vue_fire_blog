@@ -46,6 +46,7 @@
     </div>
     <button
       class="button"
+      :class="{success: isValidForm}"
       type="submit"
       :disabled="!isValidForm"
     >
