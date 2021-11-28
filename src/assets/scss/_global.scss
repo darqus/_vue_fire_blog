@@ -38,6 +38,10 @@
   height: $spacer;
   pointer-events: none;
 
+  path {
+    fill: map-get($grays, 27);
+  }
+
   .disabled,
   &:disabled {
     path {

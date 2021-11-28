@@ -180,12 +180,12 @@ $form-width-max: 350px;
         border-radius: $border-radius 0 $border-radius 0;
         place-self: center;
 
-        > .admin-icon {
+        .admin-icon {
           width: 14px;
           height: auto;
           margin-right: 8px;
 
-          path {
+          > path {
             fill: map-get($grays, 25);
           }
         }
@@ -251,10 +251,6 @@ form {
           position: absolute;
           top: 0.8 * $spacer;
           left: 17px;
-
-          path {
-            fill: map-get($grays, 27);
-          }
 
           .disabled {
             path {
