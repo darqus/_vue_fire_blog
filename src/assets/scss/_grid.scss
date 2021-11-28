@@ -10,7 +10,7 @@ body {
     > section {
       position: relative;
       display: grid;
-      background-color: map-get($grays, 6);
+      background-color: map-get($grays, 5);
       transition: filter $duration $transition;
 
       &.blur {

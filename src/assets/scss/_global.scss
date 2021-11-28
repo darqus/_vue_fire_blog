@@ -58,19 +58,19 @@ input {
 .button {
   display: grid;
   grid-auto-flow: column;
-  place-content: center;
   grid-gap: 0.75 * $spacer;
   padding: 0.75 * $spacer 1.5 * $spacer;
   font-family: Roboto, sans-serif;
   font-size: 12px;
-  color: map-get($grays, 25);
+  color: map-get($grays, 3);
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  background-color: map-get($grays, 10);
+  background-color: map-get($grays, 25);
   border: none;
   border-radius: $border-radius;
   transition: background-color $duration $transition;
+  place-content: center;
 
   &-light {
     color: map-get($grays, 25);
@@ -79,7 +79,7 @@ input {
   }
 
   &:hover {
-    background-color: rgba(map-get($grays, 10), $hover);
+    background-color: map-get($grays, 20);
   }
 
   &:focus {
@@ -88,10 +88,10 @@ input {
 
   &.inactive,
   &:disabled {
-    color: rgba(map-get($grays, 25), 0.5);
+    color: map-get($grays, 15);
     pointer-events: none;
     cursor: initial;
-    background-color: rgba(map-get($grays, 20), 0.5);
+    background-color: map-get($grays, 20);
   }
 }
 
