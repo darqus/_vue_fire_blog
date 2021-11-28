@@ -137,7 +137,7 @@
       padding: 1.5 * $spacer 2 * $spacer 1.5 * $spacer $spacer;
       text-decoration: none;
       cursor: pointer;
-      background-color: rgba(map-get($grays, 4), 0.9);
+      background-color: map-get($grays, 7);
       border-radius: $border-radius;
       box-shadow: 0 8px 25px 0 rgba($black, 0.15);
       transition: transform $duration $transition;
