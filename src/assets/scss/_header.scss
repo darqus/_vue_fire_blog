@@ -55,7 +55,13 @@
       .mobile-menu {
         cursor: pointer;
 
+        .icon-svg {
+          width: 2rem;
+          height: 2rem;
+        }
+
         path {
+          fill: $white;
           transition: fill $duration $transition;
         }
 
@@ -64,15 +70,6 @@
             path {
               fill: rgba($white, 0.7);
             }
-          }
-        }
-
-        .icon-svg {
-          width: 2rem;
-          height: 2rem;
-
-          path {
-            fill: $white;
           }
         }
       }

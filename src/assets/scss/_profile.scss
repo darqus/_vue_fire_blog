@@ -17,8 +17,8 @@ $form-width-max: 350px;
     grid-gap: 1.2 * $spacer;
     place-items: center;
     place-content: center;
-    text-align: center;
     color: $white;
+    text-align: center;
 
     @include media-breakpoint-down(sm) {
       // place-items: center stretch;
@@ -142,8 +142,8 @@ $form-width-max: 350px;
       h2 {
         font-size: 32px;
         font-weight: 300;
-        text-align: center;
         color: $white;
+        text-align: center;
       }
 
       .subheader {
@@ -247,6 +247,7 @@ form {
           position: absolute;
           top: 0.8 * $spacer;
           left: 17px;
+
           path {
             fill: map-get($grays, 27);
           }
