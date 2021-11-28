@@ -3,10 +3,12 @@
     <h2 class="content-header" v-text="title" />
     <template v-if="isWelcome">
       <div class="welcome" v-text="content" />
-      <router-link class="link content-link link-light" :to="{ name: 'Register' }">
-        Login/Register
-        <Icon light type="arrowRight" />
-      </router-link>
+      <div class="content-row-link">
+        <router-link class="link content-link link-light" :to="{ name: 'Register' }">
+          Login/Register
+          <Icon light type="arrowRight" />
+        </router-link>
+      </div>
     </template>
     <template v-else>
       <div class="content-preview" v-html="content" />

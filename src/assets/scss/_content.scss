@@ -48,7 +48,7 @@
           }
 
           .content-link {
-            display: grid;
+            display: inline-grid;
             place-content: center start;
             grid-auto-flow: column;
             grid-gap: 0.5 * $spacer;
