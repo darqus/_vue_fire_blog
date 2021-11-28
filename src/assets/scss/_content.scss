@@ -59,7 +59,7 @@
 
         .link-light {
           &:hover {
-            color: rgba($white, 0.8);
+            color: rgba($white, $hover);
             border-bottom-color: $white;
           }
         }
@@ -137,9 +137,9 @@
       padding: 1.5 * $spacer 2 * $spacer 1.5 * $spacer $spacer;
       text-decoration: none;
       cursor: pointer;
-      background-color: rgba($white, 0.9);
+      background-color: rgba(map-get($grays, 4), 0.9);
       border-radius: $border-radius;
-      box-shadow: 0 8px 25px 0 rgba($white, 0.15);
+      box-shadow: 0 8px 25px 0 rgba($black, 0.15);
       transition: transform $duration $transition;
       backdrop-filter: blur(5.5px);
       place-content: start;
@@ -161,7 +161,7 @@
       }
 
       &:hover {
-        box-shadow: $box-shadow;
+        box-shadow: 0 8px 25px 0 rgba($white, 0.15);
         transform: rotateZ(-1deg) scale(1.01);
       }
 
@@ -209,7 +209,7 @@
         position: relative;
         display: grid;
         grid-gap: 0.6 * $spacer;
-        color: $black;
+        color: map-get($grays, 25);
 
         .blog-card-title {
           overflow: hidden;

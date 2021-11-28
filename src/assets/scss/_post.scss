@@ -174,7 +174,7 @@
 }
 
 .post-view {
-  color: $white;
+  color: map-get($grays, 25);
   background-color: map-get($grays, 6);
 
   .post-view-actions {

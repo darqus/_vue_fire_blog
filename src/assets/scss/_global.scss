@@ -21,7 +21,7 @@
 
   &:hover {
     margin-right: 0;
-    color: rgba($primary, 0.8);
+    color: rgba($primary, $hover);
 
     svg {
       transform: rotateY(180deg);
@@ -73,7 +73,7 @@ input {
   }
 
   &:hover {
-    background-color: rgba($black, 0.8);
+    background-color: rgba($black, $hover);
   }
 
   &:focus {

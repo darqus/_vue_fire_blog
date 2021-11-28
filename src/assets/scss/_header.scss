@@ -1,6 +1,6 @@
 .header {
-  color: $white;
-  background-color: $black;
+  color: map-get($grays, 25);
+  background-color: map-get($grays, 3);
 
   .nav.nav-header {
     display: grid;
@@ -11,12 +11,12 @@
       .logo {
         font-size: 1.5 * $spacer;
         font-weight: 600;
-        color: $white;
+        color: map-get($grays, 25);
         text-decoration: none;
         transition: color $duration $transition;
 
         &:hover {
-          color: rgba($white, 0.7);
+          color: rgba(map-get($grays, 25), $hover);
         }
       }
     }
@@ -34,7 +34,7 @@
         .link {
           display: grid;
           font-weight: 500;
-          color: $white;
+          color: map-get($grays, 25);
           border-top: 1px solid transparent;
           border-bottom: 1px solid transparent;
           transition: color $duration $transition;
@@ -42,12 +42,12 @@
 
           &.router-link {
             &-active {
-              border-bottom: 1px solid $white;
+              border-bottom: 1px solid map-get($grays, 25);
             }
           }
 
           &:hover {
-            color: rgba($white, 0.7);
+            color: rgba(map-get($grays, 25), $hover);
           }
         }
       }
@@ -61,14 +61,14 @@
         }
 
         path {
-          fill: $white;
+          fill: map-get($grays, 25);
           transition: fill $duration $transition;
         }
 
         &:hover {
           .icon-svg {
             path {
-              fill: rgba($white, 0.7);
+              fill: rgba(map-get($grays, 25), $hover);
             }
           }
         }
@@ -81,7 +81,7 @@
       place-items: center;
       width: 40px;
       height: 40px;
-      color: $white;
+      color: map-get($grays, 25);
       cursor: pointer;
       background-color: map-get($grays, 6);
       border-radius: 50%;
@@ -140,7 +140,7 @@
           grid-auto-flow: column;
           place-items: center start;
           padding: $spacer;
-          border-bottom: 1px solid $white;
+          border-bottom: 1px solid map-get($grays, 25);
 
           .initials {
             position: initial;
@@ -150,7 +150,7 @@
             height: 40px;
             color: map-get($grays, 6);
             user-select: none;
-            background-color: $white;
+            background-color: map-get($grays, 25);
             border-radius: 50%;
             place-content: center;
           }
@@ -183,18 +183,18 @@
             grid-auto-flow: column;
             grid-gap: $spacer;
             place-items: center;
-            color: rgba($white, 0.7);
+            color: rgba(map-get($grays, 25), $hover);
             text-decoration: none;
             cursor: pointer;
             transition: color $duration $transition;
 
             &:hover,
             &.active {
-              color: $white;
+              color: map-get($grays, 25);
             }
 
             &.active::after {
-              color: $white;
+              color: map-get($grays, 25);
               content: "⇽";
             }
 
@@ -236,17 +236,17 @@
     }
 
     a {
-      color: $white;
+      color: map-get($grays, 25);
 
       &.active,
       &:hover {
-        color: rgba($white, 0.7);
+        color: rgba(map-get($grays, 25), $hover);
       }
 
       &.router-link {
         &-active {
           padding-left: 10px;
-          border-left: 2px solid $white;
+          border-left: 2px solid map-get($grays, 25);
         }
       }
     }
