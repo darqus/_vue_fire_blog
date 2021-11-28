@@ -7,7 +7,7 @@
 
 .link {
   font-size: 0.9 * $spacer;
-  color: $primary;
+  color: $secondary;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -21,7 +21,7 @@
 
   &:hover {
     margin-right: 0;
-    color: rgba($primary, $hover);
+    color: rgba($secondary, $hover);
 
     svg {
       transform: rotateY(180deg);
@@ -48,6 +48,7 @@
 
 input {
   width: 100%;
+  font-family: Roboto, sans-serif;
 }
 
 .button {
@@ -56,24 +57,25 @@ input {
   place-content: center;
   grid-gap: 0.75 * $spacer;
   padding: 0.75 * $spacer 1.5 * $spacer;
-  font-size: 13px;
-  color: $white;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: map-get($grays, 25);
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  background-color: $black;
+  background-color: map-get($grays, 10);
   border: none;
-  border-radius: 20px;
+  border-radius: $border-radius;
   transition: background-color $duration $transition;
 
   &-light {
-    color: $white;
+    color: map-get($grays, 25);
     background-color: transparent;
-    border: 2px solid $white;
+    border: 2px solid map-get($grays, 25);
   }
 
   &:hover {
-    background-color: rgba($black, $hover);
+    background-color: rgba(map-get($grays, 10), $hover);
   }
 
   &:focus {
@@ -82,10 +84,10 @@ input {
 
   &.inactive,
   &:disabled {
-    color: rgba($white, 0.5);
+    color: rgba(map-get($grays, 25), 0.5);
     pointer-events: none;
     cursor: initial;
-    background-color: rgba($black, 0.5);
+    background-color: rgba(map-get($grays, 20), 0.5);
   }
 }
 

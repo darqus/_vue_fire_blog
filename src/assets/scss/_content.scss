@@ -1,11 +1,11 @@
 .blog-wrapper {
   .blog-content {
     &:nth-child(even) {
-      background-color: map-get($grays, 31);
+      background-color: map-get($grays, 27);
     }
 
     &:nth-child(odd) {
-      background-color: map-get($grays, 29);
+      background-color: map-get($grays, 25);
     }
 
     .container {
