@@ -16,9 +16,9 @@ $form-width-max: 350px;
     display: grid;
     grid-gap: 1.2 * $spacer;
     place-items: center;
-    place-content: center;
     color: $white;
     text-align: center;
+    place-content: center;
 
     @include media-breakpoint-down(sm) {
       // place-items: center stretch;
