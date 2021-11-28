@@ -18,6 +18,7 @@ $form-width-max: 350px;
     place-items: center;
     place-content: center;
     text-align: center;
+    color: $white;
 
     @include media-breakpoint-down(sm) {
       // place-items: center stretch;
@@ -33,18 +34,18 @@ $form-width-max: 350px;
       }
 
       a {
-        color: map-get($grays, 6);
+        color: map-get($grays, 27);
         transition: color $duration $transition;
 
         &:hover {
-          color: rgba($gray-48, 0.8);
+          color: rgba(map-get($grays, 27), 0.8);
         }
       }
     }
 
     h2 {
       font-size: 1.3 * $spacer;
-      color: map-get($grays, 6);
+      color: map-get($grays, 27);
       text-align: center;
 
       @include media-breakpoint-down(sm) {
@@ -54,11 +55,11 @@ $form-width-max: 350px;
 
     .login-register {
       .router-link {
-        color: $black;
+        color: map-get($grays, 27);
         transition: color $duration $transition;
 
         &:hover {
-          color: rgba($black, 0.8);
+          color: rgba(map-get($grays, 27), 0.8);
         }
       }
     }
@@ -66,10 +67,14 @@ $form-width-max: 350px;
 
   .forgot-password {
     font-size: 14px;
-    color: $black;
+    color: map-get($grays, 27);
     cursor: pointer;
     border-bottom: 1px solid transparent;
-    transition: border-bottom $duration $transition;
+    transition: color $duration $transition;
+
+    &:hover {
+      color: rgba(map-get($grays, 27), 0.8);
+    }
   }
 
   .angle {
@@ -77,7 +82,20 @@ $form-width-max: 350px;
     right: -30px;
     width: 60px;
     height: 101%;
-    background-color: $white;
+    // background-color: $white;
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba(map-get($grays, 21), 0.8),
+        rgba(map-get($grays, 11), 0.8)
+      ),
+      radial-gradient(
+        circle at 120% 100px,
+        rgba(map-get($grays, 10), 0.8),
+        rgba(map-get($grays, 15), 0.9),
+        rgba(map-get($grays, 20), 0.8)
+      );
+    background-size: cover;
     transform: rotateZ(3deg);
 
     @include media-breakpoint-down(sm) {
@@ -91,14 +109,14 @@ $form-width-max: 350px;
     background-image:
       linear-gradient(
         to bottom,
-        rgba($gray-104, 0.4),
-        rgba($gray-32, 0.8)
+        rgba(map-get($grays, 7), 0.8),
+        rgba(map-get($grays, 4), 0.8)
       ),
       radial-gradient(
         circle at 120% 100px,
-        rgba($gray-32, 0.8),
-        rgba($gray-168, 0.9),
-        rgba($gray-32, 0.8)
+        rgba(map-get($grays, 4), 0.8),
+        rgba(map-get($grays, 7), 0.9),
+        rgba(map-get($grays, 4), 0.8)
       );
     background-size: cover;
 
@@ -112,7 +130,6 @@ $form-width-max: 350px;
 .admin {
   display: grid;
   place-content: center;
-  background-color: map-get($grays, 30);
 
   .form {
     grid-template-columns:
@@ -126,6 +143,7 @@ $form-width-max: 350px;
         font-size: 32px;
         font-weight: 300;
         text-align: center;
+        color: $white;
       }
 
       .subheader {
@@ -140,9 +158,9 @@ $form-width-max: 350px;
         place-items: center;
         width: 80px;
         height: 80px;
-        font-size: 32px;
-        color: $white;
-        background-color: map-get($grays, 6);
+        font-size: 2 * $spacer;
+        color: map-get($grays, 5);
+        background-color: map-get($grays, 30);
         border-radius: 50%;
         place-self: center;
 
@@ -188,7 +206,7 @@ form {
         display: grid;
         justify-self: start;
         font-size: 14px;
-        color: map-get($grays, 13);
+        color: map-get($grays, 20);
 
         &.error {
           font-size: 12px;
@@ -202,8 +220,9 @@ form {
         input {
           padding: 10px 10px 10px 45px;
           font-size: $spacer;
-          background-color: map-get($grays, 31);
-          border: 1px solid map-get($grays, 29);
+          color: map-get($grays, 27);
+          background-color: map-get($grays, 4);
+          border: 1px solid map-get($grays, 20);
           border-radius: 7px;
           transition: border-color $duration $transition;
 
@@ -228,6 +247,9 @@ form {
           position: absolute;
           top: 0.8 * $spacer;
           left: 17px;
+          path {
+            fill: map-get($grays, 27);
+          }
 
           .disabled {
             path {
