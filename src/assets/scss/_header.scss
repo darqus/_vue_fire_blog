@@ -13,7 +13,7 @@
         font-weight: 600;
         color: $light;
         text-decoration: none;
-        transition: color $duration $transition;
+        transition: color $duration $transition-timing-function;
 
         &:hover {
           color: rgba($light, $hover);
@@ -37,7 +37,7 @@
           color: $light;
           border-top: 1px solid transparent;
           border-bottom: 1px solid transparent;
-          transition: color $duration $transition;
+          transition: color $duration $transition-timing-function;
           place-self: center;
 
           &.router-link {
@@ -62,7 +62,7 @@
 
         path {
           fill: $light;
-          transition: fill $duration $transition;
+          transition: fill $duration $transition-timing-function;
         }
 
         &:hover {
@@ -186,7 +186,7 @@
             color: rgba($light, $hover);
             text-decoration: none;
             cursor: pointer;
-            transition: color $duration $transition;
+            transition: color $duration $transition-timing-function;
 
             &:hover,
             &.active {
@@ -223,7 +223,7 @@
 
     &-enter-active,
     &-leave-active {
-      transition: transform $duration $transition;
+      transition: transform $duration $transition-timing-function;
     }
 
     &-enter,

@@ -18,11 +18,11 @@
   text-transform: uppercase;
   cursor: pointer;
   transition:
-    color $duration $transition,
-    border-color $duration $transition;
+    color $duration $transition-timing-function,
+    border-color $duration $transition-timing-function;
 
   svg {
-    transition: transform $duration $transition;
+    transition: transform $duration $transition-timing-function;
   }
 
   &:hover {
@@ -75,7 +75,7 @@ input {
   background-color: $light;
   border: none;
   border-radius: $border-radius;
-  transition: background-color $duration $transition;
+  transition: background-color $duration $transition-timing-function;
   place-content: center;
 
   &:hover {

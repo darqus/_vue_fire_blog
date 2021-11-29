@@ -11,7 +11,7 @@ body {
       position: relative;
       display: grid;
       background-color: map-get($grays, 5);
-      transition: filter $duration $transition;
+      transition: filter $duration $transition-timing-function;
 
       &.blur {
         filter: blur(0.08 * $spacer);

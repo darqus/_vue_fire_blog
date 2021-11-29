@@ -18,7 +18,7 @@
       font-weight: 600;
       color: $light;
       text-decoration: none;
-      transition: color $duration $transition;
+      transition: color $duration $transition-timing-function;
 
       &:hover {
         color: rgba($light, $hover);

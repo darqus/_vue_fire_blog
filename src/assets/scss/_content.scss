@@ -116,7 +116,7 @@
         border: $light solid 2px;
         border-radius: 20px;
         box-shadow: $box-shadow;
-        transition: left $duration $transition;
+        transition: left $duration $transition-timing-function;
         transform: scale(1.1);
       }
 
@@ -140,7 +140,7 @@
       background-color: map-get($grays, 7);
       border-radius: $border-radius;
       box-shadow: 0 8px 25px 0 rgba($black, 0.15);
-      transition: transform $duration $transition;
+      transition: transform $duration $transition-timing-function;
       backdrop-filter: blur(5.5px);
       place-content: start;
 
@@ -182,7 +182,7 @@
           background-color: map-get($grays, 9);
           border-radius: 50%;
           box-shadow: $box-shadow;
-          transition: background-color $duration $transition;
+          transition: background-color $duration $transition-timing-function;
           place-content: center;
 
           path {
