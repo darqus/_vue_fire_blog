@@ -88,7 +88,7 @@ input {
 
   &.inactive,
   &:disabled {
-    color: map-get($grays, 15);
+    color: map-get($grays, 10);
     pointer-events: none;
     cursor: initial;
     background-color: map-get($grays, 20);
@@ -97,13 +97,11 @@ input {
   &-light {
     color: $light;
     background-color: transparent;
-    border: 2px solid $light;
   }
 
   &-dark {
     color: $light;
     background-color: map-get($grays, 6);
-    border: 2px solid $light;
 
     &:hover {
       background-color: map-get($grays, 8);
@@ -113,7 +111,6 @@ input {
   &.success {
     color: map-get($grays, 31);
     background-color: rgba($green, $hover);
-    border: 2px solid rgba($green, $hover);
 
     &:hover {
       background-color: $green;
