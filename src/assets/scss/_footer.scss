@@ -1,6 +1,6 @@
 .footer {
-  color: map-get($grays, 25);
-  background-color: map-get($grays, 3);
+  color: $light;
+  background-color: $dark;
 
   .row {
     display: grid;
@@ -16,12 +16,12 @@
     .logo {
       font-size: 1.1 * $spacer;
       font-weight: 600;
-      color: map-get($grays, 25);
+      color: $light;
       text-decoration: none;
       transition: color $duration $transition;
 
       &:hover {
-        color: rgba(map-get($grays, 25), $hover);
+        color: rgba($light, $hover);
       }
     }
 
@@ -34,19 +34,19 @@
       .link {
         font-size: 0.7 * $spacer;
         font-weight: 500;
-        color: map-get($grays, 25);
+        color: $light;
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
 
         &.router-link {
           &-active {
-            border-bottom: 1px solid map-get($grays, 25);
+            border-bottom: 1px solid $light;
           }
         }
 
         &:hover {
-          color: rgba(map-get($grays, 25), $hover);
-          border-bottom: 1px solid rgba(map-get($grays, 25), $hover);
+          color: rgba($light, $hover);
+          border-bottom: 1px solid rgba($light, $hover);
         }
       }
     }

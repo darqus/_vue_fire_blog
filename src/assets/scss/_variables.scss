@@ -119,8 +119,8 @@ $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: map-get($grays, 31) !default;
-$dark: map-get($grays, 6) !default;
+$light: map-get($grays, 25) !default;
+$dark: map-get($grays, 3) !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default

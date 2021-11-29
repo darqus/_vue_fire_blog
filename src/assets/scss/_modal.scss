@@ -14,7 +14,7 @@
     place-content: center;
     width: 300px;
     padding: 40px 30px;
-    color: map-get($grays, 25);
+    color: $light;
     background-color: map-get($grays, 5);
     border-radius: $border-radius;
 

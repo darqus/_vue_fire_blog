@@ -48,7 +48,7 @@
           <h2 class="updates-header">
             Never miss a post. Register for your free account today.
           </h2>
-          <router-link class="button" :to="{ name: 'Register' }">
+          <router-link class="button button-dark" :to="{ name: 'Register' }">
             Register for {{ appName }} <Icon light type="arrowRight" />
           </router-link>
         </div>

@@ -1,7 +1,7 @@
 .create-post,
 .edit-post {
   overflow: hidden;
-  color: map-get($grays, 25);
+  color: $light;
   background-color: map-get($grays, 5);
 
   .container {
@@ -9,7 +9,7 @@
       input {
         padding: 10px 20px;
         font-size: $spacer;
-        color: map-get($grays, 25);
+        color: $light;
         background-color: map-get($grays, 4);
         border: none;
         // border-bottom: 1px solid map-get($grays, 6);
@@ -176,7 +176,7 @@
 }
 
 .post-view {
-  color: map-get($grays, 25);
+  color: $light;
   background-color: map-get($grays, 5);
 
   .post-view-actions {
