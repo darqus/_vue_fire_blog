@@ -5,9 +5,15 @@
 @import "utilities/breakpoints";
 @import "grid";
 
+.icon-svg {
+  width: $spacer;
+  height: $spacer;
+  pointer-events: none;
+}
+
 .link {
   font-size: 0.9 * $spacer;
-  color: $secondary;
+  color: $light;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -21,7 +27,7 @@
 
   &:hover {
     margin-right: 0;
-    color: rgba($secondary, $hover);
+    color: rgba($light, $hover);
 
     svg {
       transform: rotateY(180deg);
@@ -29,23 +35,22 @@
   }
 
   &-light {
-    color: $white;
-  }
-}
-
-.icon-svg {
-  width: $spacer;
-  height: $spacer;
-  pointer-events: none;
-
-  path {
-    fill: map-get($grays, 27);
+    color: $light;
   }
 
-  .disabled,
-  &:disabled {
+  &-dark {
+    color: $dark;
+
+    &:hover {
+      color: rgba($dark, $hover);
+
+      svg {
+        transform: rotateY(180deg);
+      }
+    }
+
     path {
-      fill: map-get($grays, 20);
+      fill: $dark;
     }
   }
 }

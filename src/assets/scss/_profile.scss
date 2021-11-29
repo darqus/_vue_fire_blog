@@ -53,6 +53,23 @@ $form-width-max: 350px;
       }
     }
 
+    .icon-svg {
+      width: $spacer;
+      height: $spacer;
+      pointer-events: none;
+
+      path {
+        fill: map-get($grays, 27);
+      }
+
+      .disabled,
+      &:disabled {
+        path {
+          fill: map-get($grays, 20);
+        }
+      }
+    }
+
     .login-register {
       .router-link {
         color: $light;

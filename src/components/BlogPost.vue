@@ -14,7 +14,7 @@
       <div class="content-preview" v-html="content" />
       <div class="content-row-link">
         <small class="date" v-text="getFormatDateTime(date)" />
-        <router-link class="link content-link" :to="{ name: 'PostView', params: { id } }">
+        <router-link class="link link-dark content-link" :to="{ name: 'PostView', params: { id } }">
           View Post
           <Icon type="arrowRight" />
         </router-link>

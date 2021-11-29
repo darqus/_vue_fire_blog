@@ -1,11 +1,11 @@
 .blog-wrapper {
   .blog-content {
     &:nth-child(even) {
-      background-color: map-get($grays, 27);
+      background-color: map-get($grays, 30);
     }
 
     &:nth-child(odd) {
-      background-color: map-get($grays, 25);
+      background-color: map-get($grays, 28);
     }
 
     .container {
@@ -57,12 +57,12 @@
           }
         }
 
-        .link-light {
+        /* .link-light {
           &:hover {
             color: rgba($white, $hover);
             border-bottom-color: $white;
           }
-        }
+        } */
       }
 
       .image {
