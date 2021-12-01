@@ -19,7 +19,14 @@
           </div>
         </nav>
         <transition name="nav-mobile">
-          <Navigation v-show="showMobileNav" :admin="admin" class="nav-mobile" contain-main is-footer />
+          <Navigation
+            v-show="showMobileNav"
+            :admin="admin"
+            :is-mobile="isMobile"
+            class="nav-mobile"
+            contain-main
+            is-footer
+          />
         </transition>
       </div>
     </div>
@@ -43,35 +50,17 @@ export default {
   },
   props: {
     admin: Boolean,
+    isMobile: Boolean,
   },
-  data: () => ({
-    isMobile: false,
-    windowWidth: false,
-  }),
   computed: {
     ...mapState({
       showMobileNav: (state) => state.profile.showMobileNav,
     }),
   },
-  created() {
-    window.addEventListener('resize', this.checkScreen)
-    this.checkScreen()
-    window.addEventListener('click', this.closeMobileNav)
-  },
   methods: {
     ...mapMutations(
       ['toggleShowMobileNav'],
     ),
-    checkScreen() {
-      this.windowWidth = window.innerWidth
-      if (this.windowWidth <= 750) {
-        this.isMobile = true
-        return
-      }
-
-      this.isMobile = false
-      this.toggleShowMobileNav(false)
-    },
     closeMobileNav(event) {
       const { target } = event
       if (target !== this.$refs.mobileMenu) {

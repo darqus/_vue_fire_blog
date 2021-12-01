@@ -24,7 +24,7 @@
       v-text="overRoutes[1].meta.title"
     />
 
-    <template v-if="user">
+    <template v-if="user && isMobile">
       <router-link
         class="link"
         :to="{ name: profileRoutes[3].name }"
@@ -99,6 +99,7 @@ export default {
     containMain: Boolean,
     isFooter: Boolean,
     admin: Boolean,
+    isMobile: Boolean,
   },
   data: () => ({
     mainRoute: MAIN_ROUTE,
@@ -110,6 +111,7 @@ export default {
     ...mapState({
       user: (state) => state.user,
       loading: (state) => state.loading,
+      // showMobileNav: (state) => state.profile.showMobileNav,
     }),
   },
   created() {

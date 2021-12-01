@@ -1,6 +1,10 @@
 <template>
   <main id="app">
-    <Header v-if="!navigation" :admin="admin" />
+    <Header
+      v-if="!navigation"
+      :admin="admin"
+      :is-mobile="isMobile"
+    />
     <section :class="{ blur: loading || showMobileNav }">
       <router-view />
       <Loading v-if="loading" />
@@ -37,6 +41,8 @@ export default {
   },
   data: () => ({
     navigation: null,
+    isMobile: false,
+    windowWidth: false,
   }),
   computed: {
     ...mapState({
@@ -52,6 +58,10 @@ export default {
     },
   },
   async created() {
+    window.addEventListener('resize', this.checkScreen)
+    this.checkScreen()
+    window.addEventListener('click', this.closeMobileNav)
+
     firebase
       .auth()
       .onAuthStateChanged((user) => {
@@ -65,10 +75,17 @@ export default {
   },
   methods: {
     ...mapMutations(
-      ['updateUser', 'clearModal'],
+      [
+        'updateUser',
+        'clearModal',
+        'toggleShowMobileNav',
+      ],
     ),
     ...mapActions(
-      ['userGet', 'blogGetPosts'],
+      [
+        'userGet',
+        'blogGetPosts',
+      ],
     ),
     checkRoute() {
       const ROUTES = [
@@ -81,6 +98,16 @@ export default {
     },
     close() {
       this.clearModal()
+    },
+    checkScreen() {
+      this.windowWidth = window.innerWidth
+      if (this.windowWidth <= 750) {
+        this.isMobile = true
+        return
+      }
+
+      this.isMobile = false
+      this.toggleShowMobileNav(false)
     },
   },
 }
