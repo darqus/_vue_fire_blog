@@ -12,7 +12,7 @@
               v-show="isMobile"
               ref="mobileMenu"
               class="mobile-menu"
-              @click="toggleShowMobileNav"
+              @click="toggleShowMobileNav(!showMobileNav)"
             >
               <Icon type="menuOpen" />
             </div>
@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
+
 import Icon from '@/components/common/Icon.vue'
 import Logo from '@/components/Logo.vue'
 import Navigation from '@/components/Navigation.vue'
@@ -44,15 +46,22 @@ export default {
   },
   data: () => ({
     isMobile: false,
-    showMobileNav: false,
     windowWidth: false,
   }),
+  computed: {
+    ...mapState({
+      showMobileNav: (state) => state.profile.showMobileNav,
+    }),
+  },
   created() {
     window.addEventListener('resize', this.checkScreen)
     this.checkScreen()
     window.addEventListener('click', this.closeMobileNav)
   },
   methods: {
+    ...mapMutations(
+      ['toggleShowMobileNav'],
+    ),
     checkScreen() {
       this.windowWidth = window.innerWidth
       if (this.windowWidth <= 750) {
@@ -61,16 +70,13 @@ export default {
       }
 
       this.isMobile = false
-      this.showMobileNav = false
-    },
-    toggleShowMobileNav() {
-      this.showMobileNav = !this.showMobileNav
+      this.toggleShowMobileNav(false)
     },
     closeMobileNav(event) {
       const { target } = event
       if (target !== this.$refs.mobileMenu) {
         if (this.showMobileNav) {
-          this.showMobileNav = false
+          this.toggleShowMobileNav(false)
         }
       }
     },

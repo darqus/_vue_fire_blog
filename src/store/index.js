@@ -36,6 +36,7 @@ export default new Vuex.Store({
       email: '',
       initials: '...',
       admin: false,
+      showMobileNav: false,
     },
     user: null,
     loading: false,
@@ -55,6 +56,9 @@ export default new Vuex.Store({
   mutations: {
     toggleEditPost(state, payload) {
       state.isEditPost = payload
+    },
+    toggleShowMobileNav(state, payload) {
+      state.profile.showMobileNav = payload
     },
     setCurrentBlog(state, payload) {
       state.blog = payload

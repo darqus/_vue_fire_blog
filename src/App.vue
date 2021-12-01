@@ -1,12 +1,16 @@
 <template>
   <main id="app">
     <Header v-if="!navigation" :admin="admin" />
-    <section :class="{ blur: loading }">
+    <section :class="{ blur: loading || showMobileNav }">
       <router-view />
       <Loading v-if="loading" />
     </section>
     <Footer v-if="!navigation" :admin="admin" />
-    <Modal v-if="modal.active" :message="modal.message" @close="close" />
+    <Modal
+      v-if="modal.active"
+      :message="modal.message"
+      @close="close"
+    />
   </main>
 </template>
 
@@ -39,6 +43,7 @@ export default {
       loading: (state) => state.loading,
       modal: (state) => state.modal,
       admin: (state) => state.profile.admin,
+      showMobileNav: (state) => state.profile.showMobileNav,
     }),
   },
   watch: {

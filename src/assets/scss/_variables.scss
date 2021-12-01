@@ -218,6 +218,7 @@ $container-max-widths: map-merge(
 
 // custom variables
 $box-shadow: 0 4px 6px -1px rgba($black, 0.1), 0 2px 4px -1px rgba($black, 0.06);
+$box-shadow-inset: -200px -5px 70px -192px rgba(0, 0, 0, 0.65) inset;
 $box-shadow-white: 0 4px 6px -1px rgba($white, 0.1), 0 2px 4px -1px rgba($white, 0.06);
 $duration: 0.3s;
 $transition-timing-function: ease;

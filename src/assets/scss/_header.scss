@@ -219,6 +219,7 @@
     height: 100%;
     padding: 25px;
     background-color: map-get($grays, 6);
+    box-shadow: 18px 1px 22px 0 rgba(0, 0, 0, 0.3) inset, 18px 1px 22px 0 rgba(0, 0, 0, 0.5);
     place-content: baseline start;
 
     &-enter-active,
