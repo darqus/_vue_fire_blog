@@ -13,8 +13,8 @@ body {
       background-color: map-get($grays, 5);
       transition: filter $duration $transition-timing-function;
 
-      &.blur {
-        filter: blur(0.08 * $spacer);
+      &.overlay {
+        filter: invert(0.1);
       }
     }
   }

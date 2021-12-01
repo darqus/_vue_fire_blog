@@ -5,7 +5,7 @@
       :admin="admin"
       :is-mobile="isMobile"
     />
-    <section :class="{ blur: loading || showMobileNav }">
+    <section :class="{ overlay: loading || showMobileNav }">
       <router-view />
       <Loading v-if="loading" />
     </section>
