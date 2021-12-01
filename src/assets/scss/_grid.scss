@@ -34,8 +34,8 @@ body {
       )
       1fr;
     grid-gap:
-      1.2 * $spacer
-      1.2 * $spacer;
+      clamp(1.2 * $spacer, 2vw, 1.5 * $spacer)
+      clamp(1.2 * $spacer, 2vh, 1.5 * $spacer);
 
     &.bg-gray-dark {
       color: $white;
