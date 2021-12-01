@@ -24,6 +24,21 @@
       v-text="overRoutes[1].meta.title"
     />
 
+    <template v-if="user">
+      <router-link
+        class="link"
+        :to="{ name: profileRoutes[3].name }"
+        exact
+        v-text="profileRoutes[3].meta.title"
+      />
+
+      <span
+        class="link"
+        @click="$store.dispatch('userLogout')"
+        v-text="'Sign Out'"
+      />
+    </template>
+
     <router-link
       v-if="!user"
       class="link"
@@ -32,6 +47,7 @@
       :to="user ? { name: profileRoutes[0].name } : { name: profileRoutes[1].name }"
       v-text="user ? profileRoutes[0].meta.title : profileRoutes[1].meta.title"
     />
+
     <div v-if="user && !isFooter" ref="profile" class="nav-profile" @click="toggleProfileMenu">
       <span :key="loading" v-text="$store.state.profile.initials" />
       <div v-show="profileMenu" class="profile-menu">
