@@ -245,7 +245,8 @@
 
     @include media-breakpoint-down(sm) {
       grid-auto-flow: row;
-      padding: 125px 25px;
+      grid-gap: 2 * $spacer;
+      padding: 1 * $spacer;
     }
 
     .updates-header {
@@ -256,7 +257,8 @@
       text-transform: uppercase;
 
       @include media-breakpoint-down(sm) {
-        font-size: 40px;
+        max-width: initial;
+        font-size: 1 * $spacer;
         text-align: initial;
       }
     }

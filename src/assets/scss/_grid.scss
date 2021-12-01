@@ -48,10 +48,18 @@ body {
 
     &.row-gap-2 {
       grid-row-gap: 2.4 * $spacer;
+
+      @include media-breakpoint-down(sm) {
+        grid-row-gap: 2 * $spacer;
+      }
     }
 
     &.row-gap-3 {
       grid-row-gap: 3.6 * $spacer;
+
+      @include media-breakpoint-down(sm) {
+        grid-row-gap: 2 * $spacer;
+      }
     }
 
     > div {
