@@ -241,7 +241,7 @@
     grid-auto-flow: column;
     grid-gap: 3 * $spacer;
     place-items: center;
-    padding: 100px 25px;
+    padding: 60px 25px;
 
     @include media-breakpoint-down(sm) {
       grid-auto-flow: row;
