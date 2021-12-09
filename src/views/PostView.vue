@@ -1,6 +1,6 @@
 <template>
-  <div class="post-view">
-    <div v-if="blog" class="container row-gap-2">
+  <div v-if="!loading" class="post-view">
+    <div class="container row-gap-2">
       <div class="row">
         <h2 v-if="blog.title" class="post-view-title" v-text="blog.title" />
         <div v-if="blog.date" class="post-view-date">
@@ -29,6 +29,7 @@ export default {
   computed: {
     ...mapState({
       blog: (state) => state.blog,
+      loading: (state) => state.loading,
     }),
   },
   async created() {
