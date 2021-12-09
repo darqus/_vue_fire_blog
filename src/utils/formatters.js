@@ -23,7 +23,7 @@ const OPTIONS = {
 
 // const OPTIONS = { dateStyle: 'short', timeStyle: 'long', hour12: false }
 
-const getFormatDateTime = (ts) => {
+const createFormatDateTime = (ts) => {
   if (!ts) return '!!!Error data!!!'
   const date = new Date(ts)
   const formattedDate = new Intl.DateTimeFormat(OPTIONS).format(date)
@@ -31,4 +31,4 @@ const getFormatDateTime = (ts) => {
   return [formattedDate, formattedTime].join(', ')
 }
 
-export { getFormatDateTime }
+export { createFormatDateTime }
