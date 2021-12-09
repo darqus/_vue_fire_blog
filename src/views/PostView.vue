@@ -2,29 +2,29 @@
   <div class="post-view">
     <div v-if="blog" class="container row-gap-2">
       <div class="row">
-        <h2 class="post-view-title" v-text="blog.title" />
-        <div class="post-view-date">
+        <h2 v-if="blog.title" class="post-view-title" v-text="blog.title" />
+        <div v-if="blog.date" class="post-view-date">
           <small class="date">
             Posted on:
-            <strong v-text="getFormatDateTime(blog.date)" />
+            <strong v-text="createFormatDateTime(blog.date)" />
           </small>
         </div>
         <!-- <img :src="blog.coverPhoto" alt="blog.title"> -->
-        <div class="post-view-content" v-html="blog.content" />
+        <div v-if="blog.content" class="post-view-content" v-html="blog.content" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { getFormatDateTime } from '@/utils/formatters'
+import { createFormatDateTime } from '@/utils/formatters'
 
 import { mapState } from 'vuex'
 
 export default {
   name: 'PostView',
   data: () => ({
-    getFormatDateTime,
+    createFormatDateTime,
   }),
   computed: {
     ...mapState({
