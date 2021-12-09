@@ -13,7 +13,7 @@
       <h4 class="blog-card-title" v-text="blog.title" />
       <h6 class="blog-card-date date">
         Posted on:
-        <strong v-text="getFormatDateTime(blog.date)" />
+        <strong v-text="createFormatDateTime(blog.date)" />
       </h6>
       <div class="short-content" v-html="blog.content" />
     </div>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { getFormatDateTime } from '@/utils/formatters'
+import { createFormatDateTime } from '@/utils/formatters'
 
 import Icon from '@/components/common/Icon.vue'
 
@@ -43,7 +43,7 @@ export default {
     },
   },
   data: () => ({
-    getFormatDateTime,
+    createFormatDateTime,
   }),
 }
 </script>

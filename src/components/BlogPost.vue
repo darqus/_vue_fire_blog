@@ -13,7 +13,7 @@
     <template v-else>
       <div class="content-preview" v-html="content" />
       <div class="content-row-link">
-        <small class="date" v-text="getFormatDateTime(date)" />
+        <small class="date" v-text="createFormatDateTime(date)" />
         <router-link class="link link-dark content-link" :to="{ name: 'PostView', params: { id } }">
           View Post
           <Icon type="arrowRight" />
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { getFormatDateTime } from '@/utils/formatters'
+import { createFormatDateTime } from '@/utils/formatters'
 
 import Icon from '@/components/common/Icon.vue'
 
@@ -49,7 +49,7 @@ export default {
     },
   },
   data: () => ({
-    getFormatDateTime,
+    createFormatDateTime,
   }),
 }
 </script>
