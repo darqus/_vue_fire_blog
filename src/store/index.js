@@ -110,7 +110,7 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    async userGet({ commit, state }) {
+    async getUser({ commit, state }) {
       const dataBase = await db.collection('users').doc(firebase.auth().currentUser.uid)
       const dbResults = await dataBase.get()
       commit('setProfileInfo', dbResults)
@@ -262,7 +262,7 @@ export default new Vuex.Store({
           profileId: state.profile.id,
           date: Date.now(),
         })
-        await dispatch('blogGetPosts')
+        await dispatch('getBlogs')
         await router.push({ name: 'PostView', params: { id } })
       } catch (error) {
         state.modal.message = error.message
@@ -291,7 +291,7 @@ export default new Vuex.Store({
         state.loading = false
       }
     },
-    async blogGetPosts({ state }) {
+    async getBlogs({ state }) {
       state.loading = true
       try {
         const dataBase = await db
@@ -334,7 +334,7 @@ export default new Vuex.Store({
           date: Date.now(),
         })
         commit('filterBlogPosts', payload)
-        await dispatch('blogGetPosts')
+        await dispatch('getBlogs')
         await router.push({ name: 'PostView', params: { id: payload } })
       } catch (error) {
         state.modal.message = error.message

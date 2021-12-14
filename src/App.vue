@@ -67,11 +67,11 @@ export default {
       .onAuthStateChanged((user) => {
         this.updateUser(user)
         if (user) {
-          this.userGet(user)
+          this.getUser(user)
         }
       })
     this.checkRoute()
-    await this.blogGetPosts()
+    await this.getBlogs()
   },
   methods: {
     ...mapMutations(
@@ -83,8 +83,8 @@ export default {
     ),
     ...mapActions(
       [
-        'userGet',
-        'blogGetPosts',
+        'getUser',
+        'getBlogs',
       ],
     ),
     checkRoute() {
