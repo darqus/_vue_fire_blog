@@ -13,7 +13,7 @@
             @click="$route.params.id
               ? $store.dispatch('blogUpdatePost', $route.params.id)
               : $store.dispatch('blogCreate')"
-            v-text="$route.params.id ? 'Update Post' : 'Publish'"
+            v-text="$route.params.id ? 'Update' : 'Publish'"
           />
         </div>
         <h2 class="post-view-title" v-text="$store.state.blog.title" />

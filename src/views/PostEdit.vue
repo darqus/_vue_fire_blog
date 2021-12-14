@@ -7,7 +7,7 @@
             class="button small"
             :disabled="emptyBlog"
             @click="$store.commit('clearPost')"
-            v-text="'Clear Post'"
+            v-text="'Clear'"
           />
           <router-link
             class="button small"
@@ -20,7 +20,7 @@
             class="button small"
             :disabled="emptyBlog"
             @click="$store.dispatch('blogUpdatePost', $route.params.id)"
-            v-text="'Update Post'"
+            v-text="'Update'"
           />
         </div>
         <div class="blog-info">
@@ -28,7 +28,7 @@
             :value="blog.title"
             type="text"
             name="Title"
-            placeholder="Enter Blog Title"
+            placeholder="Enter Title"
             @input="updateBlogTitle($event.target.value)"
           >
           <!-- <div class="upload-file">

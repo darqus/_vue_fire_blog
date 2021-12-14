@@ -7,14 +7,14 @@
             class="button small"
             :disabled="emptyBlog"
             @click="clearPost"
-            v-text="'Clear Post'"
+            v-text="'Clear'"
           />
           <router-link
             class="button small"
             :class="{ inactive: emptyBlog }"
             :disabled="emptyBlog"
             :to="{ name: 'PostPreviewCreate' }"
-            v-text="'Post Preview'"
+            v-text="'Preview'"
           />
           <button
             class="button small"

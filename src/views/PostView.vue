@@ -6,12 +6,12 @@
           <button
             class="button small"
             @click.prevent="$router.push({ name: 'PostEdit', params: { id: blog.id }})"
-            v-text="'Edit Blog'"
+            v-text="'Edit'"
           />
           <button
             class="button small"
             @click.prevent="$store.dispatch('blogDeletePost', blog.id)"
-            v-text="'Delete Blog'"
+            v-text="'Delete'"
           />
         </div>
         <h2 v-if="blog.title" class="post-view-title" v-text="blog.title" />
