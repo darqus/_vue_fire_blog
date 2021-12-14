@@ -2,6 +2,27 @@
   <div class="create-post">
     <div class="container row-gap-2">
       <div class="row">
+        <div class="blog-actions">
+          <button
+            class="button"
+            :disabled="emptyBlog"
+            @click="clearPost"
+            v-text="'Clear Post'"
+          />
+          <router-link
+            class="button"
+            :class="{ inactive: emptyBlog }"
+            :disabled="emptyBlog"
+            :to="{ name: 'PostPreviewCreate' }"
+            v-text="'Post Preview'"
+          />
+          <button
+            class="button"
+            :disabled="emptyBlog"
+            @click="$store.dispatch('blogCreate')"
+            v-text="'Publish'"
+          />
+        </div>
         <div class="blog-info">
           <input
             :value="blog.title"
@@ -25,27 +46,6 @@
           :value.sync="blog.content"
           @input="updateBlogContent($event)"
         />
-        <div class="blog-actions">
-          <button
-            class="button"
-            :disabled="emptyBlog"
-            @click="clearPost"
-            v-text="'Clear Post'"
-          />
-          <router-link
-            class="button"
-            :class="{ inactive: emptyBlog }"
-            :disabled="emptyBlog"
-            :to="{ name: 'PostPreviewCreate' }"
-            v-text="'Post Preview'"
-          />
-          <button
-            class="button"
-            :disabled="emptyBlog"
-            @click="$store.dispatch('blogCreate')"
-            v-text="'Publish'"
-          />
-        </div>
       </div>
     </div>
   </div>

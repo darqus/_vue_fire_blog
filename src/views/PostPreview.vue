@@ -2,14 +2,12 @@
   <div class="post-view">
     <div class="container row-gap-2">
       <div class="row">
-        <h2 class="post-view-title" v-text="$store.state.blog.title" />
-        <!-- <img :src="blogCoverPhoto" alt="" /> -->
-        <div class="post-view-date">
-          <small class="date" v-text="createFormatDateTime(new Date())" />
-        </div>
-        <div class="post-view-content" v-html="$store.state.blog.content" />
         <div class="post-view-actions">
-          <button class="button" @click="$router.go(-1)" v-text="'Return to Edit'" />
+          <button
+            class="button"
+            @click="$router.go(-1)"
+            v-text="'Return to Edit'"
+          />
           <button
             class="button"
             @click="$route.params.id
@@ -18,6 +16,12 @@
             v-text="$route.params.id ? 'Update Post' : 'Publish'"
           />
         </div>
+        <h2 class="post-view-title" v-text="$store.state.blog.title" />
+        <!-- <img :src="blogCoverPhoto" alt="" /> -->
+        <div class="post-view-date">
+          <small class="date" v-text="createFormatDateTime(new Date())" />
+        </div>
+        <div class="post-view-content" v-html="$store.state.blog.content" />
       </div>
     </div>
   </div>

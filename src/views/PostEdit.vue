@@ -2,29 +2,6 @@
   <div class="edit-post">
     <div class="container row-gap-2">
       <div class="row">
-        <div class="blog-info">
-          <input
-            :value="blog.title"
-            type="text"
-            name="Title"
-            placeholder="Enter Blog Title"
-            @input="updateBlogTitle($event.target.value)"
-          >
-        <!-- <div class="upload-file">
-          <label for="blog-image" />
-          <input id="blog-image" ref="blogImage" type="file" name="file" accept=".png, .jpg">
-          <button
-            class="button button-preview"
-            :class="{ active: !blog.imageURL }"
-            v-text="'Preview Image'"
-          />
-          <span>File Chozen: {{ blog.imageName }}</span>
-        </div> -->
-        </div>
-        <Editor
-          :value.sync="blog.content"
-          @input="updateBlogContent($event)"
-        />
         <div class="blog-actions">
           <button
             class="button"
@@ -46,6 +23,29 @@
             v-text="'Update Post'"
           />
         </div>
+        <div class="blog-info">
+          <input
+            :value="blog.title"
+            type="text"
+            name="Title"
+            placeholder="Enter Blog Title"
+            @input="updateBlogTitle($event.target.value)"
+          >
+          <!-- <div class="upload-file">
+            <label for="blog-image" />
+            <input id="blog-image" ref="blogImage" type="file" name="file" accept=".png, .jpg">
+            <button
+              class="button button-preview"
+              :class="{ active: !blog.imageURL }"
+              v-text="'Preview Image'"
+            />
+            <span>File Chozen: {{ blog.imageName }}</span>
+          </div> -->
+        </div>
+        <Editor
+          :value.sync="blog.content"
+          @input="updateBlogContent($event)"
+        />
       </div>
     </div>
   </div>

@@ -3,15 +3,16 @@
     <div class="container row-gap-2">
       <div class="row">
         <div v-if="admin" class="post-view-actions">
-          <div
-            class="blog-card-icon pointer"
+          <button
+            class="button"
             @click.prevent="$router.push({ name: 'PostEdit', params: { id: blog.id }})"
-          >
-            <Icon type="applicationEditOutline" light />
-          </div>
-          <div class="blog-card-icon pointer" @click.prevent="$store.dispatch('blogDeletePost', blog.id)">
-            <Icon type="deleteOutline" light />
-          </div>
+            v-text="'Edit Blog'"
+          />
+          <button
+            class="button"
+            @click.prevent="$store.dispatch('blogDeletePost', blog.id)"
+            v-text="'Delete Blog'"
+          />
         </div>
         <h2 v-if="blog.title" class="post-view-title" v-text="blog.title" />
         <div v-if="blog.date" class="post-view-date">
@@ -30,14 +31,10 @@
 <script>
 import { mapState } from 'vuex'
 import { createFormatDateTime } from '@/utils/formatters'
-import Icon from '@/components/common/Icon.vue'
 
 
 export default {
   name: 'PostView',
-  components: {
-    Icon,
-  },
   data: () => ({
     createFormatDateTime,
   }),
