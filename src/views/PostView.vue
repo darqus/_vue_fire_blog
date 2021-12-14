@@ -4,12 +4,12 @@
       <div class="row">
         <div v-if="admin" class="post-view-actions">
           <button
-            class="button"
+            class="button small"
             @click.prevent="$router.push({ name: 'PostEdit', params: { id: blog.id }})"
             v-text="'Edit Blog'"
           />
           <button
-            class="button"
+            class="button small"
             @click.prevent="$store.dispatch('blogDeletePost', blog.id)"
             v-text="'Delete Blog'"
           />

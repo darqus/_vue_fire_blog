@@ -4,12 +4,12 @@
       <div class="row">
         <div class="post-view-actions">
           <button
-            class="button"
+            class="button small"
             @click="$router.go(-1)"
             v-text="'Return to Edit'"
           />
           <button
-            class="button"
+            class="button small"
             @click="$route.params.id
               ? $store.dispatch('blogUpdatePost', $route.params.id)
               : $store.dispatch('blogCreate')"

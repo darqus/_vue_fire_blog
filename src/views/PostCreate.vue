@@ -4,20 +4,20 @@
       <div class="row">
         <div class="blog-actions">
           <button
-            class="button"
+            class="button small"
             :disabled="emptyBlog"
             @click="clearPost"
             v-text="'Clear Post'"
           />
           <router-link
-            class="button"
+            class="button small"
             :class="{ inactive: emptyBlog }"
             :disabled="emptyBlog"
             :to="{ name: 'PostPreviewCreate' }"
             v-text="'Post Preview'"
           />
           <button
-            class="button"
+            class="button small"
             :disabled="emptyBlog"
             @click="$store.dispatch('blogCreate')"
             v-text="'Publish'"

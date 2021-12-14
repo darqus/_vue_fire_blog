@@ -79,6 +79,12 @@ input {
   transition: background-color $duration $transition-timing-function;
   place-content: center;
 
+  &.small {
+    padding: 0.4 * $spacer 0.9 * $spacer;
+    font-size: 11px;
+    border-radius: $border-radius * 0.7;
+  }
+
   &:hover {
     background-color: map-get($grays, 20);
   }
