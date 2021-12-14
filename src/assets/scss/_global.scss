@@ -129,3 +129,7 @@ input {
   font-weight: 400;
   color: map-get($grays, 18);
 }
+
+.pointer {
+  cursor: pointer;
+}
