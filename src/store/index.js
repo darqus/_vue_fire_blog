@@ -26,7 +26,6 @@ export default new Vuex.Store({
       content: '',
       date: '',
     },
-    isEditPost: null,
     isEditedPost: false,
     profile: {
       id: '',
@@ -54,9 +53,6 @@ export default new Vuex.Store({
     },
   },
   mutations: {
-    toggleEditPost(state, payload) {
-      state.isEditPost = payload
-    },
     toggleShowMobileNav(state, payload) {
       state.profile.showMobileNav = payload
     },

@@ -1,6 +1,6 @@
 <template>
   <router-link class="blog-card" :to="{ name: 'PostView', params: { id: blog.id } }">
-    <div v-show="$store.state.isEditPost" class="blog-card-icons">
+    <div v-show="admin" class="blog-card-icons">
       <div class="blog-card-icon" @click.prevent="$router.push({ name: 'PostEdit', params: { id: blog.id }})">
         <Icon type="applicationEditOutline" />
       </div>
@@ -41,6 +41,7 @@ export default {
         && 'content' in prop
       ),
     },
+    admin: Boolean,
   },
   data: () => ({
     createFormatDateTime,
