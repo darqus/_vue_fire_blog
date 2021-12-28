@@ -1,9 +1,16 @@
-@import "font";
-@import "reset";
-@import "utilities/functions";
-@import "variables";
-@import "utilities/breakpoints";
-@import "grid";
+*:focus {
+  outline: none !important;
+}
+
+::selection {
+  color: $white;
+  text-shadow: 0 0 4px $dark;
+  background: $secondary;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
 
 .icon-svg {
   width: $spacer;
