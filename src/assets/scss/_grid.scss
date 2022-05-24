@@ -2,14 +2,22 @@ body {
   margin: 0;
   font-family: Roboto, sans-serif;
 
-  main {
+  #app {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "content";
+    grid-template-rows: auto 1fr;
     height: 100vh;
+
+    > header {
+      grid-area: header;
+    }
 
     > section {
       position: relative;
-      display: grid;
+      grid-area: content;
+      overflow-y: auto;
       background-color: map-get($grays, 5);
       transition: filter $duration $transition-timing-function;
 
