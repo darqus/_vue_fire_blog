@@ -1,5 +1,5 @@
 <template>
-  <main id="app">
+  <div id="app">
     <Header
       v-if="!navigation"
       :admin="admin"
@@ -15,7 +15,7 @@
       :message="modal.message"
       @close="close"
     />
-  </main>
+  </div>
 </template>
 
 <script>

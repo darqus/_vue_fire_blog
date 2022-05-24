@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="blog-wrapper">
+    <main class="blog-wrapper">
       <div v-if="!user" class="blog-content">
         <div class="container row-gap-3" :class="{ 'bg-gray-dark': !user }">
           <BlogPost
@@ -25,7 +25,7 @@
           </div>
         </div>
       </template>
-    </div>
+    </main>
     <div v-if="blogPostsCards.length" class="blog-card-wrapper">
       <div class="container row-gap-3 bg-gray-dark">
         <div class="row">

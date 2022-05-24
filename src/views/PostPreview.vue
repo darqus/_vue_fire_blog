@@ -21,7 +21,7 @@
         <div class="post-view-date">
           <small class="date" v-text="createFormatDateTime(new Date())" />
         </div>
-        <div class="post-view-content" v-html="$store.state.blog.content" />
+        <main class="post-view-content" v-html="$store.state.blog.content" />
       </div>
     </div>
   </div>
