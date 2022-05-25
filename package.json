@@ -11,6 +11,7 @@
     "lint:fix": "yarn lint:eslint --fix && yarn lint:stylelint --fix",
     "lint:stylelint": "stylelint --cache \"src/**/*.{vue,scss}\"",
     "preinstall": "npx npm-force-resolutions",
+    "push:noverify": "git push --no-verify",
     "prepush": "yarn lint && yarn audit fix --groups dependencies"
   },
   "resolutions": {
