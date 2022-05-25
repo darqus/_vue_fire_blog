@@ -12,7 +12,7 @@
               v-show="isMobile"
               ref="mobileMenu"
               class="mobile-menu"
-              @click="toggleShowMobileNav(!showMobileNav)"
+              @click.stop="toggleMobileNav"
             >
               <Icon type="menuOpen" />
             </div>
@@ -61,12 +61,10 @@ export default {
     ...mapMutations(
       ['toggleShowMobileNav'],
     ),
-    closeMobileNav(event) {
+    toggleMobileNav(event) {
       const { target } = event
-      if (target !== this.$refs.mobileMenu) {
-        if (this.showMobileNav) {
-          this.toggleShowMobileNav(false)
-        }
+      if (target === this.$refs.mobileMenu) {
+        this.toggleShowMobileNav(!this.showMobileNav)
       }
     },
   },

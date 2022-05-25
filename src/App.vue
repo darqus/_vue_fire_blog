@@ -109,6 +109,14 @@ export default {
       this.isMobile = false
       this.toggleShowMobileNav(false)
     },
+    closeMobileNav(event) {
+      const { target } = event
+      if (target !== this.$refs.mobileMenu) {
+        if (this.showMobileNav) {
+          this.toggleShowMobileNav(false)
+        }
+      }
+    },
   },
 }
 </script>
