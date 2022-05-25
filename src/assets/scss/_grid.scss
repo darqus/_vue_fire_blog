@@ -18,6 +18,11 @@ body {
       position: relative;
       grid-area: content;
       overflow-y: auto;
+
+      @include media-breakpoint-down(sm) {
+        overflow-y: initial;
+      }
+
       background-color: map-get($grays, 5);
       transition: filter $duration $transition-timing-function;
 
