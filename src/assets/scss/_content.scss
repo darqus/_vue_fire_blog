@@ -12,13 +12,13 @@
       .content {
         .content-header {
           overflow: hidden;
-          font-size: 40px;
+          font-size: 32px;
           font-weight: 300;
           text-overflow: ellipsis;
           white-space: nowrap;
 
-          @include media-breakpoint-down(sm) {
-            font-size: 32px;
+          @include media-breakpoint-up(sm) {
+            font-size: 40px;
           }
         }
 
@@ -34,17 +34,15 @@
 
         .content-row-link {
           display: grid;
-          grid-auto-flow: column;
-          grid-gap: $spacer;
+          grid-gap: 0.2 * $spacer;
           font-size: $spacer;
           font-weight: 300;
           line-height: 1.7;
           place-content: center end;
 
-          @include media-breakpoint-down(sm) {
-            grid-auto-flow: initial;
-            grid-gap: 0.2 * $spacer;
-            place-content: center end;
+          @include media-breakpoint-up(sm) {
+            grid-auto-flow: column;
+            grid-gap: $spacer;
           }
 
           .content-link {
@@ -197,28 +195,26 @@
 .home .updates {
   .row {
     display: grid;
-    grid-auto-flow: column;
-    grid-gap: 3 * $spacer;
+    grid-auto-flow: row;
+    grid-gap: 2 * $spacer;
     place-items: center;
-    padding: 60px 25px;
+    padding: 1 * $spacer;
 
-    @include media-breakpoint-down(sm) {
-      grid-auto-flow: row;
-      grid-gap: 2 * $spacer;
-      padding: 1 * $spacer;
+    @include media-breakpoint-up(sm) {
+      grid-auto-flow: column;
+      grid-gap: 3 * $spacer;
+      padding: 60px 25px;
     }
 
     .updates-header {
-      max-width: 425px;
-      font-size: 1.8 * $spacer;
+      font-size: 1 * $spacer;
       font-weight: 300;
-      text-align: center;
       text-transform: uppercase;
 
-      @include media-breakpoint-down(sm) {
-        max-width: initial;
-        font-size: 1 * $spacer;
-        text-align: initial;
+      @include media-breakpoint-up(sm) {
+        max-width: 425px;
+        font-size: 1.8 * $spacer;
+        text-align: center;
       }
     }
   }

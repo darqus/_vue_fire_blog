@@ -17,10 +17,9 @@ body {
     > section {
       position: relative;
       grid-area: content;
-      overflow-y: auto;
 
-      @include media-breakpoint-down(sm) {
-        overflow-y: initial;
+      @include media-breakpoint-up(sm) {
+        overflow-y: auto;
       }
 
       background-color: map-get($grays, 5);

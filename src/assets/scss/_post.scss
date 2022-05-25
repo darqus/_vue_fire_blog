@@ -53,15 +53,14 @@
 
       .editor-buttons {
         display: grid;
-        grid-auto-flow: column;
-        place-content: start;
-        grid-gap: 5px;
+        grid-template-columns: repeat(6, auto);
+        grid-gap: 10px;
+        place-content: center;
 
-        @include media-breakpoint-down(sm) {
-          place-content: center;
-          grid-template-columns: repeat(6, auto);
-          grid-auto-flow: initial;
-          grid-gap: 10px;
+        @include media-breakpoint-up(sm) {
+          grid-auto-flow: column;
+          grid-gap: 5px;
+          place-content: start;
         }
 
         .editor-button {
@@ -163,13 +162,12 @@
 
     .blog-actions {
       display: grid;
-      grid-auto-flow: column;
       grid-gap: $spacer;
-      place-content: center end;
+      place-content: center;
 
-      @include media-breakpoint-down(sm) {
-        grid-auto-flow: initial;
-        place-content: center;
+      @include media-breakpoint-up(sm) {
+        grid-auto-flow: column;
+        place-content: center end;
       }
     }
   }

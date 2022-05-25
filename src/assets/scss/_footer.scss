@@ -4,13 +4,12 @@
 
   .row {
     display: grid;
-    grid-template-columns: auto 1fr auto;
     grid-gap: 2.5 * $spacer;
-    place-items: center initial;
+    place-items: center;
 
-    @include media-breakpoint-down(sm) {
-      grid-template-columns: initial;
-      place-items: center;
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: auto 1fr auto;
+      place-items: center initial;
     }
 
     .logo {
