@@ -4,7 +4,10 @@
     <template v-if="isWelcome">
       <div class="welcome" v-text="content" />
       <div class="content-row-link">
-        <router-link class="link content-link link-light" :to="{ name: 'Register' }">
+        <router-link
+          class="link content-link link-light"
+          :to="{ name: 'Register' }"
+        >
           Login/Register
           <Icon light type="arrowRight" />
         </router-link>
@@ -13,8 +16,11 @@
     <template v-else>
       <div class="content-preview" v-html="content" />
       <div class="content-row-link">
-        <small class="date" v-text="createFormatDateTime(date)" />
-        <router-link class="link link-dark content-link" :to="{ name: 'PostView', params: { id } }">
+        <small class="date" v-text="createDateTimeFromTimestamp(date)" />
+        <router-link
+          class="link link-dark content-link"
+          :to="{ name: 'PostView', params: { id } }"
+        >
           View Post
           <Icon type="arrowRight" />
         </router-link>
@@ -27,10 +33,9 @@
 </template>
 
 <script>
-import { createFormatDateTime } from '@/utils/formatters'
+import { createDateTimeFromTimestamp } from '@/utils/timestamp'
 
 import Icon from '@/components/common/Icon.vue'
-
 
 export default {
   name: 'BlogPost',
@@ -49,7 +54,7 @@ export default {
     },
   },
   data: () => ({
-    createFormatDateTime,
+    createDateTimeFromTimestamp,
   }),
 }
 </script>

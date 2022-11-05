@@ -5,7 +5,9 @@
         <div v-if="admin" class="post-view-actions">
           <button
             class="button small"
-            @click.prevent="$router.push({ name: 'PostEdit', params: { id: blog.id }})"
+            @click.prevent="
+              $router.push({ name: 'PostEdit', params: { id: blog.id } })
+            "
             v-text="'Edit'"
           />
           <button
@@ -18,11 +20,15 @@
         <div v-if="blog.date" class="post-view-date">
           <small class="date">
             Posted on:
-            <strong v-text="createFormatDateTime(blog.date)" />
+            <strong v-text="createDateTimeFromTimestamp(blog.date)" />
           </small>
         </div>
         <!-- <img :src="blog.coverPhoto" alt="blog.title"> -->
-        <div v-if="blog.content" class="post-view-content" v-html="blog.content" />
+        <div
+          v-if="blog.content"
+          class="post-view-content"
+          v-html="blog.content"
+        />
       </div>
     </div>
   </div>
@@ -30,13 +36,12 @@
 
 <script>
 import { mapState } from 'vuex'
-import { createFormatDateTime } from '@/utils/formatters'
-
+import { createDateTimeFromTimestamp } from '@/utils/timestamp'
 
 export default {
   name: 'PostView',
   data: () => ({
-    createFormatDateTime,
+    createDateTimeFromTimestamp,
   }),
   computed: {
     ...mapState({

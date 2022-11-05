@@ -4,7 +4,7 @@ export default {
     title: (title) => `Enter ${title} with at least 2 letters`,
   },
   email: {
-    pattern: '\\w*@\\w*\\.\\w{2,}',
+    pattern: '^[\\w\\-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$',
     title: 'For example, username@domain.com',
   },
   password: {
