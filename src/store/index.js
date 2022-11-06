@@ -119,7 +119,7 @@ export default new Vuex.Store({
       state.loading = true
 
       try {
-        const dataBase = await db.collection('users').doc(state.profile.id)
+        const dataBase = db.collection('users').doc(state.profile.id)
         await dataBase.update({
           firstName: payload.firstName,
           lastName: payload.lastName,
@@ -249,7 +249,7 @@ export default new Vuex.Store({
       state.loading = true
 
       try {
-        const dataBase = await db.collection('blogPosts').doc()
+        const dataBase = db.collection('blogPosts').doc()
         const { id } = dataBase
         await dataBase.set({
           id,
@@ -271,7 +271,7 @@ export default new Vuex.Store({
     async blogGetPost({ state, commit }, { id = '' }) {
       state.loading = true
       try {
-        const dataBase = await db.collection('blogPosts').doc(id)
+        const dataBase = db.collection('blogPosts').doc(id)
         const dbResults = await dataBase.get()
         const currentBlogPost = {
           id: dbResults.data().id,
@@ -323,7 +323,7 @@ export default new Vuex.Store({
       state.loading = true
 
       try {
-        const dataBase = await db.collection('blogPosts').doc(payload)
+        const dataBase = db.collection('blogPosts').doc(payload)
         await dataBase.update({
           title: state.blog.title,
           content: state.blog.content,
@@ -344,7 +344,7 @@ export default new Vuex.Store({
       state.loading = true
 
       try {
-        const dataBase = await db.collection('blogPosts').doc(payload)
+        const dataBase = db.collection('blogPosts').doc(payload)
         await dataBase.delete()
         commit('filterBlogPosts', payload)
       } catch (error) {
