@@ -5,9 +5,9 @@ const PWD_MAP = {
 }
 
 const RE_MAP = {
-  ONE_WORD: /[A-zА-яЁё]{2,}/,
-  EMAIL: /^[\w\-\\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-  PASSWORD: new RegExp(`^(?=.*[A-Za-z])(?=.*\\d)(?=.*[${PWD_MAP.SPC}])[A-Za-z\\d${PWD_MAP.SPC}]{${PWD_MAP.MIN},${PWD_MAP.MAX}}$`),
+  ONE_WORD: '[A-zА-яЁё]{2,}',
+  EMAIL: '^[\\w\\-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$',
+  PASSWORD: `^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[ ${PWD_MAP.SPC}])[A-Za-z\\d ${PWD_MAP.SPC}]{${PWD_MAP.MIN},${PWD_MAP.MAX}}$`,
 }
 
 export default {
