@@ -1,6 +1,8 @@
 # FireBlog ✌👍😁🎈
 
 ## Description
+Based on Vue 2
+
 ### Basic blog for write your posts:
 - blog allows you to work with blogs (create, read, update, delete - CRUD)
 - work with profile: create account, update accounts data, login, logout (use firebase email auth)
@@ -123,18 +125,16 @@ Project Console: https://console.firebase.google.com/project/fire-blog-vue-js/ov
 - Firebase Hosting URL2: https://fire-blog-vue-js.firebaseapp.com
 
 
-
 ### Material Design Icons
 https://materialdesignicons.com/
 
 ### DEV: Yarn interactive update deps:
 
-v1:
-```
+```sh
 $ yarn upgrade-interactive --latest
 ```
 
-v2:
+### Clean cache
 ```
-$ yarn upgrade-interactive
+$ yarn cache clean
 ```

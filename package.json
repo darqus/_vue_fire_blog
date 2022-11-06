@@ -49,7 +49,7 @@
     "node": ">=12.0.0",
     "npm": ">=6.0.0"
   },
-  "description": "## Project setup ``` npm i --legacy-peer-deps ```",
+  "description": "Based on Vue 2",
   "main": ".eslintrc.js",
   "repository": {
     "type": "git",
