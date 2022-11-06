@@ -5,17 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve --mode development",
     "build": "vue-cli-service build --mode production",
-    "deploy": "vue-cli-service build --mode production && firebase deploy",
-    "lint": "cross-env NODE_ENV=production yarn lint:eslint && yarn lint:stylelint",
-    "lint:eslint": "eslint --cache \"src/**/*.{js,ts,vue}\" --ignore-path .gitignore .",
-    "lint:fix": "yarn lint:eslint --fix && yarn lint:stylelint --fix",
-    "lint:stylelint": "stylelint --cache \"src/**/*.{vue,scss}\"",
-    "preinstall": "npx npm-force-resolutions",
-    "push:noverify": "git push --no-verify",
-    "prepush": "yarn lint && yarn audit fix --groups dependencies"
-  },
-  "resolutions": {
-    "ansi-regex": "5.0.1"
+    "deploy": "vue-cli-service build --mode production && firebase deploy"
   },
   "dependencies": {
     "@tiptap/extension-highlight": "^2.0.0-beta.202",
@@ -58,9 +48,6 @@
   "engines": {
     "node": ">=12.0.0",
     "npm": ">=6.0.0"
-  },
-  "gitHooks": {
-    "pre-push": "yarn prepush"
   },
   "description": "## Project setup ``` npm i --legacy-peer-deps ```",
   "main": ".eslintrc.js",
