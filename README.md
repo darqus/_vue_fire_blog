@@ -128,7 +128,7 @@ Project Console: https://console.firebase.google.com/project/fire-blog-vue-js/ov
 ### Material Design Icons
 https://materialdesignicons.com/
 
-### DEV: Yarn interactive update deps:
+### Yarn interactive update deps:
 
 ```sh
 $ yarn upgrade-interactive --latest
