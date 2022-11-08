@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve --mode development",
     "build": "vue-cli-service build --mode production",
-    "deploy": "vue-cli-service build --mode production && firebase deploy"
+    "deploy:firebase": "sh ./publish.sh"
   },
   "dependencies": {
     "@tiptap/extension-highlight": "^2.0.0-beta.202",
