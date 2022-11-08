@@ -9,7 +9,11 @@
       <router-view />
       <Loading v-if="loading" />
     </section>
-    <Footer v-if="!navigation" :admin="admin" />
+    <Footer
+      v-if="!navigation"
+      :admin="admin"
+      :is-mobile="isMobile"
+    />
     <Modal
       v-if="modal.active"
       :message="modal.message"

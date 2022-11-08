@@ -4,7 +4,13 @@
       <div class="row">
         <Logo class="logo" />
         <Navigation :admin="admin" is-footer />
-        <small v-text="copy" />
+        <div
+          class="copy"
+          :class="{'is-mobile': isMobile}"
+        >
+          <div class="small" v-text="info" />
+          <div class="small" v-text="copy" />
+        </div>
       </div>
     </div>
   </footer>
@@ -22,9 +28,11 @@ export default {
   },
   props: {
     admin: Boolean,
+    isMobile: Boolean,
   },
   data: () => ({
     copy: `© 2020 — ${new Date().getFullYear()}`,
+    info: `v: ${process.env.VUE_APP_VERSION} from: ${process.env.VUE_APP_BUILD_DATE}`,
   }),
 }
 </script>

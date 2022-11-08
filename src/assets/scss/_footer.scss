@@ -50,8 +50,19 @@
       }
     }
 
-    small {
-      font-size: 0.7rem;
+    .copy {
+      display: grid;
+      grid-auto-flow: row;
+      grid-gap: 0.5 * $spacer;
+      place-items: center end;
+
+      &.is-mobile {
+        place-items: center center;
+      }
+
+      .small {
+        font-size: 0.6rem;
+      }
     }
   }
 }
