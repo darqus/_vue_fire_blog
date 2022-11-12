@@ -80,7 +80,7 @@ export default new Vuex.Store({
       state.user = payload
     },
     checkAdmin(state, payload) {
-      const admin = process.env.VUE_APP_UIDS.includes(payload)
+      const admin = process.env.VUE_APP_ADMIN_UIDS.includes(payload)
       state.profile.admin = admin
     },
     setProfileInfo(state, payload) {

@@ -159,7 +159,7 @@ router.beforeEach(async (to, from, next) => {
   if (user) {
     const token = await user.getIdTokenResult()
     const { user_id } = token.claims
-    admin = process.env.VUE_APP_UIDS.includes(user_id)
+    admin = process.env.VUE_APP_ADMIN_UIDS.includes(user_id)
   }
   if (to.matched.some((res) => res.meta.requiresAuth)) {
     if (user) {

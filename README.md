@@ -106,7 +106,7 @@ https://firebase.google.com/docs/web/modular-upgrade#update_imports_to_v9_compat
 
 ### Local project firebase config
 ```js
-VUE_APP_UIDS["uid1", "uid2", "ect..."]
+VUE_APP_ADMIN_UIDS["uid1", "uid2", "ect..."]
 
 VUE_APP_API_KEY
 VUE_APP_AUTH_DOMAIN
@@ -118,7 +118,7 @@ VUE_APP_APP_ID
 
 Fill it from your Firebase project settings and save to .env.local
 
-VUE_APP_UIDS - array of uids blog admins
+VUE_APP_ADMIN_UIDS - array of uids blog admins
 
 Project Console: https://console.firebase.google.com/project/fire-blog-vue-js/overview
 
