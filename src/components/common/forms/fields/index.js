@@ -1,7 +1,7 @@
 const PWD_MAP = {
   MIN: 6,
   MAX: 20,
-  SPC: '@$!%*#?&',
+  SPC: '!@#$%^&*',
 }
 
 const RE_MAP = {
