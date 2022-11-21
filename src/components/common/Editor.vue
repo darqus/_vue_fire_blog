@@ -1,5 +1,8 @@
 <template>
-  <div v-if="editor" class="editor">
+  <div
+    v-if="editor"
+    class="editor"
+  >
     <div class="editor-buttons">
       <div
         v-for="{ text, paramsClass = '', paramsClick = '', onClick, icon } in buttons"
@@ -8,7 +11,11 @@
         :class="{ 'is-active': editor.isActive(paramsClass) }"
         @click="editor.chain().focus()[onClick](paramsClick).run()"
       >
-        <Icon light :type="icon" class="editor-icon" />
+        <Icon
+          light
+          :type="icon"
+          class="editor-icon"
+        />
       </div>
     </div>
     <EditorContent :editor="editor" />

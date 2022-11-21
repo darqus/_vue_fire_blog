@@ -1,5 +1,9 @@
 <template>
-  <router-link class="logo" :to="{ name: mainRoute.name }" v-text="appName" />
+  <router-link
+    class="logo"
+    :to="{ name: mainRoute.name }"
+    v-text="appName"
+  />
 </template>
 
 <script>

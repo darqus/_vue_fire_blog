@@ -31,7 +31,7 @@
             placeholder="Enter Blog Title"
             @input="updateBlogTitle($event.target.value)"
           >
-        <!-- <div class="upload-file">
+          <!-- <div class="upload-file">
           <label for="blog-image" />
           <input id="blog-image" ref="blogImage" type="file" name="file" accept=".png, .jpg">
           <button

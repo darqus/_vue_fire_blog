@@ -18,7 +18,10 @@
             v-text="$route.params.id ? 'Update' : 'Publish'"
           />
         </div>
-        <h2 class="post-view-title" v-text="$store.state.blog.title" />
+        <h2
+          class="post-view-title"
+          v-text="$store.state.blog.title"
+        />
         <!-- <img :src="blogCoverPhoto" alt="" /> -->
         <div class="post-view-date">
           <small
@@ -26,7 +29,10 @@
             v-text="createDateTimeFromTimestamp(new Date())"
           />
         </div>
-        <main class="post-view-content" v-html="$store.state.blog.content" />
+        <main
+          class="post-view-content"
+          v-html="$store.state.blog.content"
+        />
       </div>
     </div>
   </div>

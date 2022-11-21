@@ -4,12 +4,22 @@
       <div class="row">
         <h2>Account Settings</h2>
 
-        <div v-if="profile.initials" class="initials">
+        <div
+          v-if="profile.initials"
+          class="initials"
+        >
           <div v-text="profile.initials" />
         </div>
 
-        <div v-if="profile.admin" class="admin-badge">
-          <Icon light type="admin" class="admin-icon" />
+        <div
+          v-if="profile.admin"
+          class="admin-badge"
+        >
+          <Icon
+            light
+            type="admin"
+            class="admin-icon"
+          />
           <span>admin</span>
         </div>
 

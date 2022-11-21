@@ -1,8 +1,14 @@
 <template>
   <div class="home">
     <main class="blog-wrapper">
-      <div v-if="!user" class="blog-content">
-        <div class="container row-gap-3" :class="{ 'bg-gray-dark': !user }">
+      <div
+        v-if="!user"
+        class="blog-content"
+      >
+        <div
+          class="container row-gap-3"
+          :class="{ 'bg-gray-dark': !user }"
+        >
           <BlogPost
             :id="welcomePost.id"
             :is-welcome="welcomePost.isWelcome"
@@ -13,7 +19,11 @@
         </div>
       </div>
       <template v-if="blogPostsFeed.length">
-        <div v-for="{ id, title, content, date, image } in blogPostsFeed" :key="id" class="blog-content">
+        <div
+          v-for="{ id, title, content, date, image } in blogPostsFeed"
+          :key="id"
+          class="blog-content"
+        >
           <div class="container">
             <BlogPost
               :id="id"
@@ -26,7 +36,10 @@
         </div>
       </template>
     </main>
-    <div v-if="blogPostsCards.length" class="blog-card-wrapper">
+    <div
+      v-if="blogPostsCards.length"
+      class="blog-card-wrapper"
+    >
       <div class="container row-gap-3 bg-gray-dark">
         <div class="row">
           <h3 class="blog-card-header">
@@ -42,14 +55,24 @@
         </div>
       </div>
     </div>
-    <div v-if="!user" class="updates">
+    <div
+      v-if="!user"
+      class="updates"
+    >
       <div class="container row-gap-3 bg-gray-light">
         <div class="row">
           <h2 class="updates-header">
             Never miss a post. Register for your free account today.
           </h2>
-          <router-link class="button button-dark" :to="{ name: 'Register' }">
-            Register for {{ appName }} <Icon light type="arrowRight" />
+          <router-link
+            class="button button-dark"
+            :to="{ name: 'Register' }"
+          >
+            Register for {{ appName }}
+            <Icon
+              light
+              type="arrowRight"
+            />
           </router-link>
         </div>
       </div>

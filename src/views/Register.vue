@@ -1,10 +1,16 @@
 <template>
   <div class="form-wrapper">
     <div class="form">
-      <h1><Logo /></h1>
+      <h1>
+        <Logo />
+      </h1>
       <div class="login-register">
         Already have an account?
-        <router-link class="router-link" :to="{ name: 'Login' }" v-text="'Login'" />
+        <router-link
+          class="router-link"
+          :to="{ name: 'Login' }"
+          v-text="'Login'"
+        />
       </div>
       <h2>Create Your {{ appName }} Account</h2>
 

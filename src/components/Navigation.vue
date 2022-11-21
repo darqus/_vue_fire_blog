@@ -48,11 +48,26 @@
       v-text="user ? profileRoutes[0].meta.title : profileRoutes[1].meta.title"
     />
 
-    <div v-if="user && !isFooter" ref="profile" class="nav-profile" @click="toggleProfileMenu">
-      <span :key="loading" v-text="$store.state.profile.initials" />
-      <div v-show="profileMenu" class="profile-menu">
+    <div
+      v-if="user && !isFooter"
+      ref="profile"
+      class="nav-profile"
+      @click="toggleProfileMenu"
+    >
+      <span
+        :key="loading"
+        v-text="$store.state.profile.initials"
+      />
+      <div
+        v-show="profileMenu"
+        class="profile-menu"
+      >
         <div class="nav-profile-info">
-          <div :key="loading" class="initials" v-text="$store.state.profile.initials" />
+          <div
+            :key="loading"
+            class="initials"
+            v-text="$store.state.profile.initials"
+          />
           <div class="right">
             <div v-text="`${$store.state.profile.firstName} ${$store.state.profile.lastName}`" />
             <div>
@@ -62,8 +77,15 @@
         </div>
         <div class="nav-profile-options">
           <div class="option">
-            <router-link class="option" active-class="active" :to="{ name: profileRoutes[3].name }">
-              <Icon light type="user" />
+            <router-link
+              class="option"
+              active-class="active"
+              :to="{ name: profileRoutes[3].name }"
+            >
+              <Icon
+                light
+                type="user"
+              />
               <div>Profile</div>
             </router-link>
           </div>
@@ -73,8 +95,14 @@
               <div>Add Admin</div>
             </router-link>
           </div> -->
-          <div class="option" @click="$store.dispatch('userLogout')">
-            <Icon light type="logout" />
+          <div
+            class="option"
+            @click="$store.dispatch('userLogout')"
+          >
+            <Icon
+              light
+              type="logout"
+            />
             <div>Sign Out</div>
           </div>
         </div>

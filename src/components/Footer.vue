@@ -3,13 +3,22 @@
     <div class="container">
       <div class="row">
         <Logo class="logo" />
-        <Navigation :admin="admin" is-footer />
+        <Navigation
+          :admin="admin"
+          is-footer
+        />
         <div
           class="copy"
-          :class="{'is-mobile': isMobile}"
+          :class="{ 'is-mobile': isMobile }"
         >
-          <div class="small" v-text="info" />
-          <div class="small" v-text="copy" />
+          <div
+            class="small"
+            v-text="info"
+          />
+          <div
+            class="small"
+            v-text="copy"
+          />
         </div>
       </div>
     </div>

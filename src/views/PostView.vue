@@ -1,8 +1,14 @@
 <template>
-  <div v-if="!loading" class="post-view">
+  <div
+    v-if="!loading"
+    class="post-view"
+  >
     <div class="container row-gap-2">
       <div class="row">
-        <div v-if="admin" class="post-view-actions">
+        <div
+          v-if="admin"
+          class="post-view-actions"
+        >
           <button
             class="button small"
             @click.prevent="
@@ -16,8 +22,15 @@
             v-text="'Delete'"
           />
         </div>
-        <h2 v-if="blog.title" class="post-view-title" v-text="blog.title" />
-        <div v-if="blog.date" class="post-view-date">
+        <h2
+          v-if="blog.title"
+          class="post-view-title"
+          v-text="blog.title"
+        />
+        <div
+          v-if="blog.date"
+          class="post-view-date"
+        >
           <small class="date">
             Posted on:
             <strong v-text="createDateTimeFromTimestamp(blog.date)" />

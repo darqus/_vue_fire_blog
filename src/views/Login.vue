@@ -1,10 +1,16 @@
 <template>
   <div class="form-wrapper">
     <div class="form">
-      <h1><Logo /></h1>
+      <h1>
+        <Logo />
+      </h1>
       <div class="login-register">
         Don't have an account?
-        <router-link class="router-link" :to="{ name: 'Register' }" v-text="'Register'" />
+        <router-link
+          class="router-link"
+          :to="{ name: 'Register' }"
+          v-text="'Register'"
+        />
       </div>
       <h2>Login to {{ appName }}</h2>
 
@@ -15,7 +21,11 @@
         @submit="$store.dispatch('userLogin', form.inputs)"
       />
 
-      <router-link class="forgot-password" :to="{ name: 'ForgotPassword' }" v-text="'Forgot your password?'" />
+      <router-link
+        class="forgot-password"
+        :to="{ name: 'ForgotPassword' }"
+        v-text="'Forgot your password?'"
+      />
       <div class="angle" />
     </div>
 

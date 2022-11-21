@@ -7,7 +7,10 @@
             <Logo class="logo" />
           </div>
           <div class="nav-links">
-            <Navigation v-show="!isMobile" :admin="admin" />
+            <Navigation
+              v-show="!isMobile"
+              :admin="admin"
+            />
             <div
               v-show="isMobile"
               ref="mobileMenu"

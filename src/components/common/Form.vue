@@ -1,5 +1,8 @@
 <template>
-  <form ref="form" @submit.prevent="$emit('submit', form)">
+  <form
+    ref="form"
+    @submit.prevent="$emit('submit', form)"
+  >
     <div class="inputs">
       <div
         v-for="({
@@ -17,7 +20,10 @@
         class="input"
       >
         <template v-if="form.showLabels">
-          <label :for="name" v-text="label" />
+          <label
+            :for="name"
+            v-text="label"
+          />
           <label
             v-show="!new RegExp(pattern).test(inputs[index].value)"
             class="error"
@@ -39,14 +45,18 @@
             @input="checkValidity"
           >
           <div class="icon">
-            <Icon :type="icon" :disabled="disabled" :class="iconClassName" />
+            <Icon
+              :type="icon"
+              :disabled="disabled"
+              :class="iconClassName"
+            />
           </div>
         </div>
       </div>
     </div>
     <button
       class="button"
-      :class="{success: isValidForm}"
+      :class="{ success: isValidForm }"
       type="submit"
       :disabled="!isValidForm"
     >

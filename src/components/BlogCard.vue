@@ -3,7 +3,10 @@
     class="blog-card"
     :to="{ name: 'PostView', params: { id: blog.id } }"
   >
-    <div v-show="admin" class="blog-card-icons">
+    <div
+      v-show="admin"
+      class="blog-card-icons"
+    >
       <div
         class="blog-card-icon"
         @click.prevent="
@@ -21,12 +24,18 @@
     </div>
     <!-- <img class="blog-card-image" :src="`/img/cards/${image}.jpg`" :alt="title"> -->
     <div class="blog-card-info">
-      <h4 class="blog-card-title" v-text="blog.title" />
+      <h4
+        class="blog-card-title"
+        v-text="blog.title"
+      />
       <h6 class="blog-card-date date">
         Posted on:
         <strong v-text="createDateTimeFromTimestamp(blog.date)" />
       </h6>
-      <div class="short-content" v-html="blog.content" />
+      <div
+        class="short-content"
+        v-html="blog.content"
+      />
     </div>
   </router-link>
 </template>

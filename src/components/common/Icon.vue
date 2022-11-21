@@ -1,6 +1,12 @@
 <template>
-  <svg viewBox="0 0 24 24" class="icon-svg">
-    <path :fill="filled" :d="path" />
+  <svg
+    viewBox="0 0 24 24"
+    class="icon-svg"
+  >
+    <path
+      :fill="filled"
+      :d="path"
+    />
   </svg>
 </template>
 
